@@ -1,0 +1,83 @@
+const {Dog, Temperament} = require ('../db.js');
+const {allDogs, getTemperamentsFromApi, findNameInApi} =require ("./functions.js")
+
+const getDogs = async (req, res) => { 
+    const upTemperaments = await getTemperamentsFromApi();
+    upTemperaments.map(async e=> {
+        await Temperament.findOrCreate({
+            where: {
+                name: e.name
+            } 
+        });
+    });
+    const { name } = req.query;
+    let result;
+    try{  
+        let totalDogs = await allDogs();
+        if(name) {
+         result= totalDogs.filter(e => e.name.toLowerCase().includes(name.toLowerCase()));
+        }else {
+            result = totalDogs;
+        }
+        if(result.length === 0) return res.status(404).json({error: "No existe dicho Perro"});
+        res.send(result);
+    }catch{
+        res.status(404).json({error: "Hubo un error..."});
+    }
+}; 
+
+const getDogId = async (req, res) => { 
+    const { idRaza } = req.params;
+    let totalDogs = await allDogs();
+    try{
+        result = totalDogs.filter(e => e.id == idRaza);
+        if(result.length === 0) return res.status(404).json({error: "No existe el perro con dicho Id"});
+        res.send(result);
+    }catch{
+        res.status(404).json({error: "Hubo un error..."});
+    }
+};
+
+const postDogs = async (req, res) => {
+    const { name, height, weight, years, temperament} = req.body;
+    if(!name || !height || !weight) return res.status(404).json({error: "Falta enviar datos obligatorios"});
+    if(name){
+        if(await findNameInApi(name)) return res.status(404).json({error: "the Dog already exists..."});
+        let findDogNameInDB = await Dog.findOne({
+                where: {name: name.toLowerCase()}
+            });
+         if(findDogNameInDB) return res.status(404).json({error: "the Dog already exists..."});
+        }
+    try {
+        const dog = await Dog.create({
+                    name: name,
+                    height: height,
+                    weight: weight,
+                    years: years
+            });
+            let findTempDog = await Temperament.findAll({
+                where: {name: temperament}
+            });
+            await dog.addTemperament(findTempDog);
+            res.status(200).json("Created Dog!");
+    } catch {
+        res.status(404).send({error: "Error en alguno de los datos provistos"});
+    }
+};
+
+const getTemperaments = async (req, res) => { 
+    let tempers;
+    try{    
+        tempers = await Temperament.findAll();
+        res.send(tempers);
+    }catch{
+        res.status(404).json({error: "Hubo un error..."});
+    }
+};
+
+module.exports = {
+    getTemperaments,
+    postDogs,
+    getDogId,
+    getDogs
+}
