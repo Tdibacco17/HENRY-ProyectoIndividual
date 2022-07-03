@@ -1,0 +1,42 @@
+.cardsDog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.reloadBtn {
+    background:rgba(255, 255, 255, 0.596);
+    width: 100px;
+    height: 25px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    font-family: 'LatoBlack';
+    font-size: 14px;
+    
+}
+
+.reloadBtn:hover {
+    background: rgba(255, 255, 255, 0.301);
+}
+
+.homeBtn {
+    background:rgba(255, 255, 255, 0.596);
+    width: 100px;
+    height: 50px;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    font-family: 'LatoBlack';
+    font-size: 16px;
+}
+
+.homeBtn:hover {
+    background: rgba(255, 255, 255, 0.301);
+}

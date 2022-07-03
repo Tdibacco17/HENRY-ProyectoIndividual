@@ -1,0 +1,16 @@
+.landingBtn {
+    background:rgba(255, 255, 255, 0.596);
+    width: 100px;
+    height: 50px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    font-family: 'LatoBlack';
+    font-size: 18px;
+}
+
+.landingBtn:hover {
+    background: rgba(255, 255, 255, 0.301);
+}

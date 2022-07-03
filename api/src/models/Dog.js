@@ -14,18 +14,41 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    height: { //altura
+    height_min: { //altura
       type: DataTypes.STRING,
       allowNull: false,
     },
-    weight: { //peso
-      type: DataTypes.STRING,
-      allowNull: false,
-     },
-     years: { //años
+    height_max: { //altura
       type: DataTypes.STRING,
       allowNull: true,
     },
+    weight_min: { //peso min
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    weight_max: { //peso max
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    year_min: { //años
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    year_max: { //años
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: 
+      'https://www.clarin.com/img/2021/07/24/llegan-a-pesar-mas-de___yqKyyB2BQ_720x0__1.jpg'
+    },
+    createdInDb: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true,
+    }
   }, { //cosas que trae la tabla por default
     timestamps: false,
   });

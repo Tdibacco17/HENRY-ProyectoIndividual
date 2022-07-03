@@ -1,0 +1,63 @@
+.allFilters {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.filterPeso {
+    background:rgba(255, 255, 255, 0.596);
+    height: 30px;
+    padding: 4px;
+    font-size: 15px;
+    border: 2px  rgba(255, 255, 255, 0.18);
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'LatoBlack';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.filterAZ {
+    background:rgba(255, 255, 255, 0.596);
+    height: 30px;
+    padding: 4px;
+    font-size: 15px;
+    border: 2px  rgba(255, 255, 255, 0.18);
+    border-radius:  5px 0px 0px 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'LatoBlack';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.filterCreated {
+    background:rgba(255, 255, 255, 0.596);
+    height: 30px;
+    padding: 4px;
+    font-size: 15px;
+    border: 2px  rgba(255, 255, 255, 0.18);
+    border-radius:  0px 5px 5px 0px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'LatoBlack';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.selectTemperaments {
+    background:rgba(255, 255, 255, 0.596);
+    height: 30px;
+    padding: 4px;
+    font-size: 15px;
+    border: 2px  rgba(255, 255, 255, 0.18);
+    border-radius:  5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'LatoBlack';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+

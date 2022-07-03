@@ -1,4 +1,10 @@
 body {
+  background: url("https://s1.1zoom.me/b4635/216/Dogs_Painting_Art_Black_and_white_Glasses_530462_1920x1080.jpg");
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

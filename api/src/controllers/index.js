@@ -39,8 +39,8 @@ const getDogId = async (req, res) => {
 };
 
 const postDogs = async (req, res) => {
-    const { name, height, weight, years, temperament} = req.body;
-    if(!name || !height || !weight) return res.status(404).json({error: "Falta enviar datos obligatorios"});
+    const { name, height_min, height_max, weight_min, weight_max, year_min, year_max, image, temperament} = req.body;
+    if(!name || !height_min || !weight_min ) return res.status(404).json({error: "Falta enviar datos obligatorios"});
     if(name){
         if(await findNameInApi(name)) return res.status(404).json({error: "the Dog already exists..."});
         let findDogNameInDB = await Dog.findOne({
@@ -51,9 +51,13 @@ const postDogs = async (req, res) => {
     try {
         const dog = await Dog.create({
                     name: name,
-                    height: height,
-                    weight: weight,
-                    years: years
+                    height_min: height_min || "Unknown",
+                    height_max: height_max || "Unknown",
+                    weight_min: weight_min || "Unknown",
+                    weight_max: weight_max || "Unknown",
+                    year_min: year_min || "Unknown",
+                    year_max: year_max || "Unknown",
+                    image: image
             });
             let findTempDog = await Temperament.findAll({
                 where: {name: temperament}
@@ -66,6 +70,7 @@ const postDogs = async (req, res) => {
 };
 
 const getTemperaments = async (req, res) => { 
+
     let tempers;
     try{    
         tempers = await Temperament.findAll();

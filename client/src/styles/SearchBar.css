@@ -1,0 +1,37 @@
+.searchBtn {
+    background:rgba(255, 255, 255, 0.596);
+    width: 100px;
+    height: 32px;
+    color: black;
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+    border: 2px  rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    font-family: 'LatoBlack';
+    font-size: 16px;
+}
+
+.searchBtn:hover {
+    background: rgba(255, 255, 255, 0.301);
+}
+
+.inputCss {
+    background:rgba(255, 255, 255, 0.596);
+    height: 25px;
+    max-width: 200px;
+    padding: 3.5px;
+    color: black;
+    font-size: 15px;
+    border: 2px  rgba(255, 255, 255, 0.18);
+    border-radius:  5px 0px 0px 5px;
+    font-family: 'LatoBlack';
+    font-size: 16px;
+}
+
+.inputBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
