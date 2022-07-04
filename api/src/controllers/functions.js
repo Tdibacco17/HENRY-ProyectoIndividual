@@ -57,7 +57,7 @@ async function allDogs(){
 };
 
 async function getTemperamentsFromApi() {  //refactorizar 
-    const apidog = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`); 
+    const apidog = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`);
     
     return await apidog.data.map(e => {
         return {           
@@ -68,6 +68,7 @@ async function getTemperamentsFromApi() {  //refactorizar
 
 async function findNameInApi(name){
     const apidog = await axios.get(`https://api.thedogapi.com/v1/breeds/search?q=${name.toLowerCase()}`);
+    // console.log(apidog)
     if(apidog.data.length === 0) return false;
     return true;
 };

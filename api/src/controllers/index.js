@@ -2,14 +2,7 @@ const {Dog, Temperament} = require ('../db.js');
 const {allDogs, getTemperamentsFromApi, findNameInApi} =require ("./functions.js")
 
 const getDogs = async (req, res) => { 
-    const upTemperaments = await getTemperamentsFromApi();
-    upTemperaments.map(async e=> {
-        await Temperament.findOrCreate({
-            where: {
-                name: e.name
-            } 
-        });
-    });
+    
     const { name } = req.query;
     let result;
     try{  
@@ -70,7 +63,17 @@ const postDogs = async (req, res) => {
 };
 
 const getTemperaments = async (req, res) => { 
-
+    const upTemperaments = await getTemperamentsFromApi();
+    const arrayTemps = upTemperaments.map(e => e.name.split(", "));
+    let setTemp = new Set (arrayTemps.flat());
+    
+    for (e of setTemp) {
+        if (e) await Temperament.findOrCreate({
+        where: { 
+            name: e 
+        }});
+    }
+    
     let tempers;
     try{    
         tempers = await Temperament.findAll();

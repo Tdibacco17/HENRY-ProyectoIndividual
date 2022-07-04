@@ -10,7 +10,6 @@ import "../styles/Home.css";
 import "../styles/Filters.css";
 
 // import {Link} from "react-router-dom";
-// [ ] Input de búsqueda para encontrar razas de perros por nombre
 
 export default function Home(){
     

@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import { Link, useHistory} from "react-router-dom";
-import { postDog, getTemperaments} from "../actions";
+import { postDog, getTemperaments, getAllDogs} from "../actions";
 import "../styles/DogCreate.css";
 
 
@@ -34,7 +34,7 @@ const [input, setInput] = useState({
     weight_max: "",
     year_min: "",
     year_max: "",
-    temperament: "",
+    temperament: [],
     image:"",
 });
 
@@ -57,7 +57,15 @@ function handleChange(e){
 function handleSelect(e){
     setInput({
         ...input,
-        temperament: [e.target.value] //si quiero muchos ponerlo asi [...input.temperament,e.target.value]
+        temperament: [...input.temperament, e.target.value] //si quiero muchos ponerlo asi [...input.temperament,e.target.value]
+    });
+    console.log(input)
+}
+
+function handleDelete(e){
+    setInput({
+        ...input,
+        temperament: [] 
     });
     console.log(input)
 }
@@ -75,7 +83,7 @@ function handleSubmit(e){
     weight_max: "",
     year_min: "",
     year_max: "",
-    temperament: "",
+    temperament: [],
     image:"",
     });
     history.push("/home");
@@ -167,16 +175,6 @@ function handleSubmit(e){
                     />
                 </div>
                 <div className="nameLabelNameBtn">
-                    <label className="nameLabelTemperament">Temperaments:</label>
-                    <select className="inputCreateTemperament" onChange={e =>handleSelect(e)}>
-                        {
-                            temps.map(el => (
-                                <option value={el.name}>{el.name}</option>
-                            ))
-                        }
-                    </select>
-                </div>
-                <div className="nameLabelNameBtn">
                     <label className="nameLabel">Image:</label>
                     <input 
                     className="inputCreate"
@@ -186,8 +184,30 @@ function handleSubmit(e){
                     onChange={e =>handleChange(e)}
                     />
                 </div>
-                
-                <button className="dogCreateBtn" type="submit" > Created Dog!</button>
+                <div className="nameLabelNameBtn">
+                    <label className="nameLabelTemperament">Temperaments:</label>
+                    <select className="inputCreateTemperament" onChange={e =>handleSelect(e)}>
+                        <option></option>
+                        {
+                            temps.map(el => (
+                                <option value={el.name}>{el.name}</option>
+                            ))
+                        }
+                    </select>
+                    <button className="buttonCleanTemperament" type="button" onClick={e =>handleDelete(e)}>Clean</button>
+                </div>
+        
+                <div className="nameLabelNameBtn">
+                    { 
+                        input.temperament.length !== 0 &&
+                        <ul><li className="listTemps">{input.temperament.map(e => e + ", ")}</li></ul>
+                    }
+                </div>
+                    { 
+                        input.name.length !== 0 && input.weight_min.length !== 0 && input.height_min.length !== 0 &&
+                        <button className="dogCreateBtn" type="submit" > Created Dog!</button>
+                        
+                    }
             </form>
         </div>
     );

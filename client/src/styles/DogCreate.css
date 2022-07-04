@@ -76,7 +76,6 @@
     padding: 4px;
     font-size: 15px;
     border: 2px  rgba(255, 255, 255, 0.18);
-    border-radius:  0px 5px 5px 0px;
     cursor: pointer;
     font-family: 'LatoBlack';
     font-size: 16px;
@@ -84,10 +83,27 @@
     margin-bottom: 16px;
 }
 
+.buttonCleanTemperament{
+    background:rgba(255, 255, 255, 0.596);
+    border: 2px  rgba(255, 255, 255, 0.18);
+    border-radius:  0px 5px 5px 0px;
+    font-family: 'LatoBlack';
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.buttonCleanTemperament:hover {
+    background: rgba(255, 255, 255, 0.301);
+}
+
 .nameLabelNameBtn {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .spanError {
@@ -98,3 +114,15 @@
     color: #db3659;
     font-size: 14px;
   }
+
+  .listTemps {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background: black;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.596);
+    font-size: 14px;
+  }
+ 

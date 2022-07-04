@@ -31,6 +31,7 @@ function handleSubmit(e){
     return (
         <div className="inputBtn">
             <input 
+                name="Enter"
                 className="inputCss" 
                 type="text" 
                 placeholder="Search a dog..." 

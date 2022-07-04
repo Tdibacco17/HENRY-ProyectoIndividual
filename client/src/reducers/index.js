@@ -34,7 +34,7 @@ export default function rootReducer(state = initialState, action){
             }
         case "FILTER_TEMPERAMENT":
             let allDogs = state.allDogs
-            const statusFiltered = action.payload === 'All'? allDogs : allDogs.filter(( el => el.temperament === action.payload)) 
+            const statusFiltered = action.payload === 'All'? allDogs : allDogs.filter(( el => el.temperament && el.temperament.split(', ').find((e) => e === action.payload))) 
             return {
                 ...state,
                 dogs: statusFiltered
