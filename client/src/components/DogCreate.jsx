@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import { Link, useHistory} from "react-router-dom";
-import { postDog, getTemperaments, getAllDogs} from "../actions";
+import { postDog, getTemperaments} from "../actions";
 import "../styles/DogCreate.css";
 
 
@@ -40,7 +40,7 @@ const [input, setInput] = useState({
 
 useEffect(()=> {
     dispatch(getTemperaments());
-}, []);
+}, [dispatch]);
 
 function handleChange(e){
     setInput({
