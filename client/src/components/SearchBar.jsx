@@ -20,10 +20,12 @@ function handleSubmit(e){
     console.log(name);
     console.log(setName);
     if(name.length !== 0){
-        dispatch(getDogByName(name))
+        dispatch(getDogByName(name));
+        setName({
+            Enter: ""
+        });
     }else {
         alert('Please input a name to start the search')
-        setName("");
     }
 };
 
@@ -32,6 +34,7 @@ function handleSubmit(e){
         <div className="inputBtn">
             <input 
                 name="Enter"
+                value={name.Enter}
                 className="inputCss" 
                 type="text" 
                 placeholder="Search a dog..." 

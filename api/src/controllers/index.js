@@ -83,6 +83,8 @@ const getTemperaments = async (req, res) => {
     }
 };
 
+// console.log(Dog.prototype);
+
 module.exports = {
     getTemperaments,
     postDogs,

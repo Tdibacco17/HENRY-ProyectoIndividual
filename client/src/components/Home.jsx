@@ -3,7 +3,7 @@ import { useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getAllDogs, getTemperaments, filterTemperaments, filterCreated, orderByName, orderByWeight} from "../actions";
 import { Link } from "react-router-dom";
-import Card from "./Card.jsx";
+import Card from "./Card.jsx";  
 import SearchBar from "./SearchBar";
 import Paginado from "./Paginado";
 import "../styles/Home.css";
@@ -12,7 +12,7 @@ import "../styles/Filters.css";
 // import {Link} from "react-router-dom";
 
 export default function Home(){
-    
+
 const dispatch = useDispatch();
 const [order, setOrder] = useState("");
 const [order2, setOrder2] = useState("");
@@ -22,6 +22,7 @@ const [dogsPerPage, setdogPerPage] = useState(8);
 const indexOfLastDog = currentPage * dogsPerPage;
 const indexOfFirstDog = indexOfLastDog - dogsPerPage;
 const currentDogs = allDogs.slice(indexOfFirstDog, indexOfLastDog);
+
 
 const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);

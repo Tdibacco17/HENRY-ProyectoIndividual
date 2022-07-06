@@ -4,7 +4,6 @@ import { Link, useHistory} from "react-router-dom";
 import { postDog, getTemperaments} from "../actions";
 import "../styles/DogCreate.css";
 
-
 function validate(input){
     let errors = {};
     if(!input.name){
@@ -205,6 +204,7 @@ function handleSubmit(e){
                 </div>
                     { 
                         input.name.length !== 0 && input.weight_min.length !== 0 && input.height_min.length !== 0 &&
+                        // input.weight_min < input.weight_max &&
                         <button className="dogCreateBtn" type="submit" > Created Dog!</button>
                         
                     }
