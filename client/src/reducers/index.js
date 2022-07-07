@@ -11,7 +11,7 @@ export default function rootReducer(state = initialState, action){
             return {
                 ...state,
                 dogs: action.payload,
-                allDogs: action.payload
+                allDogs: action.payload //respaldo de arreglo de todos los dogs para usar en los filtros
             }
         case "GET_DOG_BY_NAME": 
             return {
@@ -32,23 +32,23 @@ export default function rootReducer(state = initialState, action){
             return {
                 ...state
             }
-        case "FILTER_TEMPERAMENT":
-            let allDogs = state.allDogs
+        case "FILTER_TEMPERAMENT": //devuelvo todos los perros si el payload es all, sino filtra el perro por el payload que llega
+            let allDogs = state.allDogs 
             const statusFiltered = action.payload === 'All'? allDogs : allDogs.filter(( el => el.temperament && el.temperament.split(', ').find((e) => e === action.payload))) 
             return {
                 ...state,
                 dogs: statusFiltered
             }
-        case "FILTER_CREATED":
+        case "FILTER_CREATED": //devuelvo los perros si el payload es creatd y que tengan la propiedad createdInDb, sino los de la api 
             const createdFilter = action.payload === "Created" ? state.allDogs.filter(e => e.createdInDb) : state.allDogs.filter(e => !e.createdInDb)
             return {
                 ...state,
-                dogs: action.payload === 'All' ? state.allDogs : createdFilter
+                dogs: action.payload === 'All' ? state.allDogs : createdFilter // y sino todos
             }
-        case "ORDER_BY_NAME":
+        case "ORDER_BY_NAME": //filtro por ascendete o decendente
             const arreglo = action.payload === 'asc' ?
-            state.dogs.sort(function (a, b) {
-                if (a.name > b.name) {
+            state.dogs.sort(function (a, b) {  
+                if (a.name > b.name) {         
                     return 1
                 }
                 if (b.name > a.name) {
@@ -69,7 +69,7 @@ export default function rootReducer(state = initialState, action){
                 ...state,
                 dogs: arreglo
             }
-        case "ORDER_WEIGHT":
+        case "ORDER_WEIGHT": //filtro por peso max y min
             const ord = action.payload === "min" ?
             [...state.dogs].sort(function (a, b) {
                 if (a.weight_min > b.weight_min) {

@@ -5,14 +5,14 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('dog', {
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.UUID,  //algoritmo que genera numero aletatorio
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
-      primaryKey: true,
+      primaryKey: true, 
     },
     name: { //nombre raza
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false,    //para que sea campo obligatorio
     },
     height_min: { //altura
       type: DataTypes.STRING,
@@ -49,7 +49,7 @@ module.exports = (sequelize) => {
       allowNull: false,
       defaultValue: true,
     }
-  }, { //cosas que trae la tabla por default
+  }, { //cosas que trae la tabla por default de hora y fecha de creacion
     timestamps: false,
   });
 };

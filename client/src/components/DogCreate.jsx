@@ -189,7 +189,7 @@ function handleSubmit(e){
                         <option></option>
                         {
                             temps.map(el => (
-                                <option value={el.name}>{el.name}</option>
+                                <option key={el.id} value={el.name}>{el.name}</option>
                             ))
                         }
                     </select>
