@@ -6,6 +6,11 @@ import "../styles/DogCreate.css";
 
 function validate(input){
     let errors = {};
+    const regexName = /^([a-zA-Z ]+)$/i;
+    
+    if (input.name && !regexName.test(input.name)) {
+        errors.name = "The name can't include special characters or numbers";
+    }
     if(!input.name){
         errors.name = "Name is required";
     }
