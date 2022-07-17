@@ -40,7 +40,7 @@ export default function rootReducer(state = initialState, action){
                 dogs: statusFiltered
             }
         case "FILTER_CREATED": //devuelvo los perros si el payload es creatd y que tengan la propiedad createdInDb, sino los de la api 
-            const createdFilter = action.payload === "Created" ? state.allDogs.filter(e => e.createdInDb) : state.allDogs.filter(e => !e.createdInDb)
+            var createdFilter = action.payload === "Created" ? state.allDogs.filter(e => e.createdInDb) : state.allDogs.filter(e => !e.createdInDb)
             return {
                 ...state,
                 dogs: action.payload === 'All' ? state.allDogs : createdFilter // y sino todos
@@ -92,6 +92,10 @@ export default function rootReducer(state = initialState, action){
             return {
                 ...state,
                 dogs: ord
+            }
+        case "DELETE_DOG": 
+            return{
+                ...state
             }
         default:
             return state;

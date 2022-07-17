@@ -1,23 +1,37 @@
-.paginado {
-    display: inline-block;
+.paginado{
+    display: inline-flex;
+    font-weight: bolder;
     cursor: pointer;
-
 }
 
 .paginado li {
     display: inline;
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(255, 255, 255, 0.5);
     color: black;
     padding: 6px 12px;
     margin: 0 2px;
+    width: 25px;
     font-size: 20px;
     font-family: 'LatoBlack';
     border-radius: 5px;
-    border: 2px solid rgba(255, 255, 255, 0.18);
+    border: 2px rgba(255, 255, 255, 0.5);
     
 }
 
 .paginado li:hover {
-    /* transition: 0.3s; */
     background-color: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
+}
+
+.contenedorPaginado {
+    background-color: rgba(128, 128, 128, 0.850);
+}
+
+.loading {
+    background-color: none;
+
+}
+
+@media screen and (max-width: 600px){
+
 }

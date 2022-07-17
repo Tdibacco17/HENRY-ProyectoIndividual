@@ -16,7 +16,7 @@ async function getDogsFromApi() {  //me traigo todo lo que quiero de la API
         year_min: parseInt(e.life_span.split("-")[0]) || "Unknown",
         year_max: parseInt(e.life_span.split("-")[1]) || "Unknown",
         temperament: e.temperament || "Unknown",
-        image: e.image.url
+        image: e.image.url,
        }
     });
 
@@ -49,7 +49,7 @@ async function allDogs(){ // junto api y base de datos para armar una funcion qu
             year_max: e.year_max,
             temperament: e.temperaments.map(e => e.name).toString(),   // mapeo todos los temperamentos y paso ese array a string
             image: e.image? e.image:'https://www.clarin.com/img/2021/07/24/llegan-a-pesar-mas-de___yqKyyB2BQ_720x0__1.jpg',
-            createdInDb: e.createdInDb
+            createdInDb: e.createdInDb,
         } 
     });
     const alldogs = api.concat(info);
@@ -68,7 +68,7 @@ async function getTemperamentsFromApi() {  //me traigo todos los temperamentos d
 
 async function findNameInApi(name){ // funcionar para validar si existe un perro con el mismo nombre en API a la hora de crearlo
     const apidog = await axios.get(`https://api.thedogapi.com/v1/breeds/search?q=${name.toLowerCase()}`);
-    // console.log(apidog)
+
     if(apidog.data.length === 0) return false;
     return true;
 };
@@ -76,5 +76,5 @@ async function findNameInApi(name){ // funcionar para validar si existe un perro
 module.exports = {
     allDogs,
     getTemperamentsFromApi,
-    findNameInApi
+    findNameInApi,
 }

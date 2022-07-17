@@ -4,10 +4,11 @@ import { useDispatch } from "react-redux";
 import { getDogByName } from "../actions";
 import "../styles/SearchBar.css";
 
-export default function SearchBar(){
+export default function SearchBar({setCurrentPage}){
 
 const dispatch = useDispatch();
 const [name, setName] = useState("");
+
 
 function handleInputChange(e){
     e.preventDefault();
@@ -16,14 +17,12 @@ function handleInputChange(e){
 
 function handleSubmit(e){
     e.preventDefault();
-    // dispatch(getDogByName(name));
-    console.log(name);
-    console.log(setName);
     if(name.length !== 0){
         dispatch(getDogByName(name));
         setName({
             Enter: ""
         });
+        setCurrentPage(1);
     }else {
         alert('Please input a name to start the search')
     }

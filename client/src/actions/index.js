@@ -28,7 +28,7 @@ export function getDogByName(name) { // filtrar perro por name
                 payload: json.data
             });
         }catch(error) {
-            console.log(error);
+            alert(error.response.data.error);
         }
     };
 };
@@ -85,3 +85,12 @@ export function orderByWeight(payload) {//ordenamiento de peso
     };
 };
 
+export function deleteDog(id){
+    return async function(dispatch){
+            let json = await axios.delete(`http://localhost:3001/dogs/${id}`)
+            return dispatch({
+                type: "DELETE_DOG",
+                payload: json
+            });
+    };
+};

@@ -1,11 +1,11 @@
 .searchBtn {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(128, 128, 128, 0.678);
     width: 100px;
     height: 32px;
     color: black;
     font-weight: bold;
     border-radius: 0px 5px 5px 0px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(128, 128, 128, 0.678);
     cursor: pointer;
     font-family: 'LatoBlack';
     font-size: 16px;
@@ -13,16 +13,18 @@
 
 .searchBtn:hover {
     background: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
+    transition: 0.3s;
 }
 
 .inputCss {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(128, 128, 128, 0.678);
     height: 25px;
     max-width: 200px;
     padding: 3.5px;
     color: black;
     font-size: 15px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(128, 128, 128, 0.678);
     border-radius:  5px 0px 0px 5px;
     font-family: 'LatoBlack';
     font-size: 16px;

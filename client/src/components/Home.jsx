@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Card from "./Card.jsx";  
 import SearchBar from "./SearchBar";
 import Paginado from "./Paginado";
+import Footer from "./Footer";
 import "../styles/Home.css";
 import "../styles/Filters.css";
 
@@ -67,7 +68,7 @@ function handleWeight(e) {
 return (
         <div>
             <Link to="/dogs"><button className="homeBtn"> Create Dog! </button></Link>
-            <SearchBar/>
+            <SearchBar setCurrentPage={setCurrentPage}/>
         <div className="allFilters">
             <div>
             <select className="filterAZ" onChange={e => handleSort(e)}>
@@ -103,7 +104,14 @@ return (
             </div>
 
                 <p><button className="reloadBtn" onClick={e=>{handleClick(e)}}>RELOAD</button></p>
-                <Paginado dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado}/>
+                
+                <Paginado 
+                dogsPerPage={dogsPerPage} 
+                allDogs={allDogs.length} 
+                paginado={paginado}
+                />
+                
+                <div className="contenedorCards">
                 <div className="cardsDog">
                     {
                     currentDogs && currentDogs.map(e => {
@@ -113,6 +121,8 @@ return (
                     })
                     }
                 </div>
+                </div>
+                <Footer/>
         </div>
     );
 

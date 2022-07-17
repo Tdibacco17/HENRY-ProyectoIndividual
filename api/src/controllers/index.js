@@ -12,7 +12,7 @@ const getDogs = async (req, res) => { // obtener todos los perros y filtrar por 
         }else {
             result = totalDogs;
         }
-        if(result.length === 0) return res.status(404).json({error: "No existe dicho Perro"});
+        if(result.length === 0) return res.status(404).json({error: "The dog does not exist"});
         res.status(200).json(result);
     }catch{
         res.status(404).json({error: "Hubo un error..."});
@@ -32,7 +32,7 @@ const getDogId = async (req, res) => {  // filtro de perros por id
 };
 
 const postDogs = async (req, res) => {  // crear un perro
-    const { name, height_min, height_max, weight_min, weight_max, year_min, year_max, image, temperament} = req.body;
+    const { name, height_min, height_max, weight_min, weight_max, year_min, year_max, origin,  image, temperament} = req.body;
     
     if(!name || !height_min || !weight_min ) return res.status(404).json({error: "Falta enviar datos obligatorios"});
     
@@ -53,7 +53,7 @@ const postDogs = async (req, res) => {  // crear un perro
                     weight_max: weight_max || "Unknown",
                     year_min: year_min || "Unknown",
                     year_max: year_max || "Unknown",
-                    image: image
+                    image: image,
             });
             let findTempDog = await Temperament.findAll({ //busco todos los temperamentos que coincidan con el nombre 
                 where: {name: temperament}
@@ -86,11 +86,23 @@ const getTemperaments = async (req, res) => { // muestro todos los temperamentos
     }
 };
 
-// console.log(Dog.prototype);
+const deleteDog = async (req, res) => {
+    const {idRaza} = req.params
+    
+    try{
+        let deleteDog = await Dog.destroy({
+            where: {id: idRaza}
+        })
+        res.status(200).json('Dog Deleted')
+    }catch(error){
+        res.status(404).json(error.message)
+    }
+}
 
 module.exports = {
     getTemperaments,
     postDogs,
     getDogId,
-    getDogs
+    getDogs,
+    deleteDog
 }

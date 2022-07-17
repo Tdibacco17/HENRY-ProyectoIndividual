@@ -1,43 +1,60 @@
+.contenedor {
+    background-color: rgba(128, 128, 128, 0.850);
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: auto; 
+    margin-right: auto;
+    width: 400px; 
+    border-radius: 5px;
+    margin-bottom: 60px;
+}
+
+
 .dogBackBtn {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(128, 128, 128, 0.678);
     width: 100px;
     height: 27px;
     color: black;
     font-weight: bold;
     border-radius: 5px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(128, 128, 128, 0.678);
     cursor: pointer;
     font-family: 'LatoBlack';
     font-size: 16px;
 }
 
 .dogBackBtn:hover {
+    transition: 0.3s;
     background: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
 }
 
 .dogCreateBtn {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(255, 255, 255, 0.301);
     width: 100px;
     height: 42px;
     color: black;
     font-weight: bold;
     border-radius: 5px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(255, 255, 255, 0.301);
     cursor: pointer;
     font-family: 'LatoBlack';
     font-size: 16px;
 }
 
 .dogCreateBtn:hover {
-    background: rgba(255, 255, 255, 0.301);
+    background: rgba(128, 128, 128, 0.678);
+    border: 2px  rgba(128, 128, 128, 0.678);
+    transition: 0.3s;
 }
 
 .nameLabel {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(255, 255, 255, 0.5);
     color: black;
     font-weight: bold;
+    width: 120px;
     border-radius: 5px 0px 0px 5px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(255, 255, 255, 0.5);
     font-family: 'LatoBlack';
     font-size: 16px;
     padding: 3.5px;
@@ -45,13 +62,13 @@
 }
 
 .inputCreate {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(255, 255, 255, 0.5);
     height: 16px;
     max-width: 200px;
     padding: 4.5px;
     color: black;
     font-size: 15px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(255, 255, 255, 0.5);
     border-radius:  0px 5px 5px 0px;
     font-family: 'LatoBlack';
     font-size: 16px;
@@ -59,11 +76,12 @@
 }
 
 .nameLabelTemperament {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(255, 255, 255, 0.5);
     color: black;
     font-weight: bold;
+    width: 130px;
     border-radius: 5px 0px 0px 5px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(255, 255, 255, 0.5);
     font-family: 'LatoBlack';
     font-size: 16px;
     padding: 4px;
@@ -71,11 +89,11 @@
 }
 
 .inputCreateTemperament {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(255, 255, 255, 0.5);
     height: 26px;
     padding: 4px;
     font-size: 15px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(255, 255, 255, 0.5);
     cursor: pointer;
     font-family: 'LatoBlack';
     font-size: 16px;
@@ -83,9 +101,15 @@
     margin-bottom: 16px;
 }
 
+.inputCreateTemperament:hover {
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
+}
+
 .buttonCleanTemperament{
-    background:rgba(255, 255, 255, 0.596);
-    border: 2px  rgba(255, 255, 255, 0.18);
+    background:rgba(255, 255, 255, 0.5);
+    border: 2px  rgba(255, 255, 255, 0.5);
     border-radius:  0px 5px 5px 0px;
     font-family: 'LatoBlack';
     font-size: 16px;
@@ -97,6 +121,8 @@
 
 .buttonCleanTemperament:hover {
     background: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
+    transition: 0.3s;
 }
 
 .nameLabelNameBtn {
@@ -113,16 +139,18 @@
     border-radius: 5px;
     color: #db3659;
     font-size: 14px;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 20px;
   }
 
   .listTemps {
     display: flex;
-    justify-content: center;
-    justify-items: center;
     background: black;
     padding: 5px;
+    width: 315px;
     border-radius: 5px;
-    color: rgba(255, 255, 255, 0.596);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 14px;
   }
  

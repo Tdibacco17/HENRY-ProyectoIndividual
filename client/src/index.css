@@ -1,8 +1,6 @@
 body {
-  background: url("https://s1.1zoom.me/b4635/216/Dogs_Painting_Art_Black_and_white_Glasses_530462_1920x1080.jpg");
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
+  background: url("https://www.xtrafondos.com/wallpapers/perro-en-el-pasto-5797.jpg");
+  background-position: center;
   background-size: cover; 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,4 +13,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media screen and (max-width: 750px){
+  body {
+    background: url("https://www.xtrafondos.com/descargar.php?id=5797&vertical=1");
+    background-position: center;
+    background-size: cover;
+  }
 }

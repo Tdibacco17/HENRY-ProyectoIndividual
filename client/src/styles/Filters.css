@@ -6,11 +6,11 @@
 }
 
 .filterPeso {
-    background:rgba(255, 255, 255, 0.596);
+    background: rgba(128, 128, 128, 0.678);
     height: 30px;
     padding: 4px;
     font-size: 15px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(128, 128, 128, 0.678);
     margin-top: 10px;
     cursor: pointer;
     font-family: 'LatoBlack';
@@ -18,12 +18,18 @@
     font-weight: bold;
 }
 
+.filterPeso:hover {
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
+}
+
 .filterAZ {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(128, 128, 128, 0.678);
     height: 30px;
     padding: 4px;
     font-size: 15px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(128, 128, 128, 0.678);
     border-radius:  5px 0px 0px 5px;
     margin-top: 10px;
     cursor: pointer;
@@ -32,12 +38,18 @@
     font-weight: bold;
 }
 
+.filterAZ:hover {
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
+}
+
 .filterCreated {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(128, 128, 128, 0.678);
     height: 30px;
     padding: 4px;
     font-size: 15px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(128, 128, 128, 0.678);
     border-radius:  0px 5px 5px 0px;
     margin-top: 10px;
     cursor: pointer;
@@ -46,12 +58,18 @@
     font-weight: bold;
 }
 
+.filterCreated:hover {
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
+}
+
 .selectTemperaments {
-    background:rgba(255, 255, 255, 0.596);
+    background:rgba(128, 128, 128, 0.678);
     height: 30px;
     padding: 4px;
     font-size: 15px;
-    border: 2px  rgba(255, 255, 255, 0.18);
+    border: 2px  rgba(128, 128, 128, 0.678);
     border-radius:  5px;
     margin-top: 20px;
     cursor: pointer;
@@ -60,4 +78,9 @@
     font-weight: bold;
 }
 
+.selectTemperaments:hover {
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.301);
+    border: 2px  rgba(255, 255, 255, 0.301);
+}
 

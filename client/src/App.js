@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>Henry Dogs</h1>
+        <h1>Henry Dogs App</h1>
         <Route exact path='/' component={LandingPage}/>
         <Route exact path='/home' component={Home}/>
         <Route exact path='/dogs' component={DogCreate}/>

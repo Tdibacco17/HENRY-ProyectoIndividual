@@ -9,8 +9,10 @@ export default function Paginado({dogsPerPage, allDogs, paginado}) {
     };
 
     return (
-        <nav className="paginado">
-            <ul>
+        <nav>
+            {pageNumbers.length > 0 ?
+            <div className="contenedorPaginado">
+            <ul className="paginado">
                 {
                     pageNumbers && pageNumbers.map((number) => (
                         <li key={number}>
@@ -19,6 +21,9 @@ export default function Paginado({dogsPerPage, allDogs, paginado}) {
                     ))
                 }
             </ul>
+            </div> : <p className="loading">Loading...</p>
+            } 
         </nav>
     );
 };
+
