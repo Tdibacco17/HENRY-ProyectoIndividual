@@ -11,7 +11,7 @@ export default function LandingPage(){
                         <button className="landingBtn"> START </button>
                     </Link>
                 </div>
-            <p className="blanco">By Tomas Di Bacco</p>
+            <p className="byTomas">By Tomas Di Bacco</p>
             <Footer/>
         </div>
     )

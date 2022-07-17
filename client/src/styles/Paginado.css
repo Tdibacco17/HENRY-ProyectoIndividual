@@ -1,7 +1,6 @@
 .paginado{
     display: inline-flex;
     font-weight: bolder;
-    cursor: pointer;
 }
 
 .paginado li {
@@ -14,7 +13,8 @@
     font-size: 20px;
     font-family: 'LatoBlack';
     border-radius: 5px;
-    border: 2px rgba(255, 255, 255, 0.5);
+    border: 2px rgba(255, 255, 255, 0.5);   
+    cursor: pointer;
     
 }
 
@@ -25,6 +25,7 @@
 
 .contenedorPaginado {
     background-color: rgba(128, 128, 128, 0.850);
+    
 }
 
 .loading {
@@ -32,6 +33,28 @@
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1100px){
+    .paginado{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 35px;
+        margin-bottom: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
+    .paginado li {
+    display: inline;
+    background:rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 6px 12px;
+    margin: 6px;
+    width: 25px;
+    font-size: 20px;
+    font-family: 'LatoBlack';
+    border-radius: 5px;
+    border: 2px rgba(255, 255, 255, 0.5);  
+        
+    } 
+    
 }
