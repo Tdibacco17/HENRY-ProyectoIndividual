@@ -7,10 +7,11 @@
     border: 2px  rgba(128, 128, 128, 0.678);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
     font-family: 'LatoBlack';
+    padding-bottom: 10px;
 }
 
 .cardDog img{
-    margin-top: 15px;
+    margin-top: 10px;
     border-radius: 8px;
     width: 90%;
 }
@@ -26,4 +27,13 @@
     transition: 0.3s;
     background-color: rgba(255, 255, 255, 0.301);
     border: 2px  rgba(255, 255, 255, 0.301);
+}
+
+@media screen and (max-width: 1250px){
+
+    .cardDog {
+        width: 285px;
+        height: 430px;
+    }
+    
 }
