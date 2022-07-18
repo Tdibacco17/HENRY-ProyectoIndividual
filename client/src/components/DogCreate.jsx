@@ -246,7 +246,7 @@ function handleSubmit(e){
         
                         { 
                             input.temperament.length !== 0 &&
-                            <ul><li className="listTemps">{input.temperament.map(e => e + ", ")}</li></ul>
+                            <ul className="centradoUl"><li className="listTemps">{input.temperament.map(e => e + ", ")}</li></ul>
                         }
                     
                         { 
