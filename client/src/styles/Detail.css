@@ -44,6 +44,23 @@
     margin-top: 20px;
 }
 
+.deleteBtn{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    top: -355px;
+    right: -210px;
+    background:rgba(187, 125, 125, 0.748);
+    border: 2px rgba(187, 125, 125, 0.748);
+    cursor: pointer;
+}
+.deleteBtn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px  rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
 @media screen and (max-width: 1250px){
 
     .conjunto {
@@ -63,5 +80,10 @@
         width: 290px;
         height: 380px;
     }
-    
+    .deleteBtn{
+        width: 25px;
+        height: 25px;
+        top: -360px;
+        right: -135px;
+    }
 }

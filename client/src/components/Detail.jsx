@@ -41,7 +41,7 @@ export default function Detail(props){
                         <h4>Life span min: {myDog[0].year_min} age</h4>
                         <h4>Life span max: {myDog[0].year_max} age</h4>
                         {
-                            myDog[0].createdInDb && <button onClick={e => handleClick(e)}> X </button>
+                            myDog[0].createdInDb && <button className="deleteBtn" onClick={e => handleClick(e)}> X </button>
                         }
                     </div>
                 </div> : <p>Loading..</p>
