@@ -56,11 +56,13 @@
         margin-top: 80px;
         margin-bottom: 40px;
         width: 310px;
-        height:220px;
+        height: 220px;
     }
 
     .detailBody {
         width: 290px;
+        height: 380px;
+        padding: 10px;
     }
     
 }
