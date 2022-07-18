@@ -15,7 +15,7 @@ code {
     monospace;
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1250px){
   body {
     background-image: url("./img/DogMobile.jpg");
     background-position: center;
