@@ -54,6 +54,7 @@
     background:rgba(187, 125, 125, 0.748);
     border: 2px rgba(187, 125, 125, 0.748);
     cursor: pointer;
+    padding: 2px;
 }
 .deleteBtn:hover {
     background: rgba(255, 255, 255, 0.5);
@@ -83,7 +84,7 @@
     .deleteBtn{
         width: 25px;
         height: 25px;
-        top: -360px;
+        top: -365px;
         right: -135px;
     }
 }
