@@ -20,5 +20,6 @@ code {
     background-image: url("./img/DogMobile.jpg");
     background-position: center;
     background-size: cover;
+    margin: 0;
   }
 }
