@@ -29,6 +29,9 @@
     font-family: 'LatoBlack';
     font-size: 16px;
 }
+.inputCss::placeholder{
+    color: rgb(211, 208, 208);
+}
 
 .inputBtn {
     display: flex;
