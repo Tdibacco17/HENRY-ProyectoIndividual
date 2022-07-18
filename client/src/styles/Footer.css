@@ -32,4 +32,14 @@ html {
 }
 
 
-/* @media screen and (max-width: 1250px){} */
+@media screen and (max-width: 1250px){
+  .imgHenry{
+    width: 60px;
+    height: 40px;
+  }
+
+  .imgLogoDog{
+    width: 40px;
+    height: 40px;
+  }
+}

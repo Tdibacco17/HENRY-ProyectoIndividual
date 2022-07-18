@@ -76,6 +76,10 @@
     margin-bottom: 16px;
 }
 
+.inputCreate::placeholder{
+    color: rgb(111, 109, 109);
+}
+
 .nameLabelTemperament {
     background:rgba(255, 255, 255, 0.5);
     color: black;

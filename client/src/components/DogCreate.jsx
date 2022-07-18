@@ -156,6 +156,7 @@ function handleSubmit(e){
                             value={input.height_min}
                             name="height_min"
                             onChange={e =>handleChange(e)}
+                            placeholder="Number"
                         />
                     </div>
                         {errors.height_min && (<p className="spanError">{errors.height_min}</p>)}
@@ -167,6 +168,7 @@ function handleSubmit(e){
                             value={input.height_max}
                             name="height_max"
                             onChange={e =>handleChange(e)}
+                            placeholder="Number"
                         />
                     </div>
                         {errors.height_max && (<p className="spanError">{errors.height_max}</p>)}
@@ -178,6 +180,7 @@ function handleSubmit(e){
                             value={input.weight_min}
                             name="weight_min"
                             onChange={e =>handleChange(e)}
+                            placeholder="Number"
                         />
                     </div>
                         {errors.weight_min && (<p className="spanError">{errors.weight_min}</p>)}
@@ -189,6 +192,7 @@ function handleSubmit(e){
                             value={input.weight_max}
                             name="weight_max"
                             onChange={e =>handleChange(e)}
+                            placeholder="Number"
                         />
                     </div>
                         {errors.weight_max && (<p className="spanError">{errors.weight_max}</p>)}
@@ -200,6 +204,7 @@ function handleSubmit(e){
                             value={input.year_min}
                             name="year_min"
                             onChange={e =>handleChange(e)}
+                            placeholder="Number"
                         />
                     </div>
                         {errors.year_min && (<p className="spanError">{errors.year_min}</p>)}
@@ -211,6 +216,7 @@ function handleSubmit(e){
                             value={input.year_max}
                             name="year_max"
                             onChange={e =>handleChange(e)}
+                            placeholder="Number"
                         />
                     </div>
                         {errors.year_max && (<p className="spanError">{errors.year_max}</p>)}
