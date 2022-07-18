@@ -134,7 +134,7 @@ function handleSubmit(e){
             <Link to="/home"><button className="dogBackBtn"> Back </button></Link>
             
             <div className="contenedor">
-                <h3>Crea tu Dog!</h3>
+                <h3>Create Dog!</h3>
             
                 <form onSubmit={e => handleSubmit(e)}>
                     <div className="nameLabelNameBtn">

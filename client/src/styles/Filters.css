@@ -11,11 +11,13 @@
     padding: 4px;
     font-size: 15px;
     border: 2px  rgba(128, 128, 128, 0.678);
+    border-radius:  0px 0px 0px 0px;
     margin-top: 10px;
     cursor: pointer;
     font-family: 'LatoBlack';
     font-size: 16px;
     font-weight: bold;
+    
 }
 
 .filterPeso:hover {
@@ -36,6 +38,7 @@
     font-family: 'LatoBlack';
     font-size: 16px;
     font-weight: bold;
+    color: black;
 }
 
 .filterAZ:hover {
@@ -56,6 +59,7 @@
     font-family: 'LatoBlack';
     font-size: 16px;
     font-weight: bold;
+    color: black;
 }
 
 .filterCreated:hover {
@@ -76,6 +80,7 @@
     font-family: 'LatoBlack';
     font-size: 16px;
     font-weight: bold;
+    color: black;
 }
 
 .selectTemperaments:hover {

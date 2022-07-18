@@ -14,7 +14,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/* 
 @media screen and (max-width: 1250px){
   body {
     background-image: url("./img/DogMobile.jpg");
@@ -22,4 +22,4 @@ code {
     background-size: cover;
     margin: 0;
   }
-}
+} */
