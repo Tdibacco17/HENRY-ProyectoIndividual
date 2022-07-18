@@ -1,5 +1,5 @@
 body {
-  background: url("https://www.xtrafondos.com/wallpapers/perro-en-el-pasto-5797.jpg");
+  background-image: url("./img/DogDesktop.jpg");
   background-position: center;
   background-size: cover;
   margin: 0;
@@ -17,7 +17,7 @@ code {
 
 @media screen and (max-width: 750px){
   body {
-    background: url("https://www.xtrafondos.com/descargar.php?id=5797&vertical=1");
+    background-image: url("./img/DogMobile.jpg");
     background-position: center;
     background-size: cover;
   }
