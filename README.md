@@ -3,10 +3,10 @@
 </br>
  <a href="https://pi-dogs-main-pearl.vercel.app/" rel="noopener noreferrer" target="_blank">Sitio WEB</a>
 <p>Te invito a visitar la pagina!</p>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs.jpg" alt="background" width="400px" height="200px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs2.png" alt="background" width="400px" height="200px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs3.png" alt="background" width="400px" height="200px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs4.png" alt="background" width="400px" height="200px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs.jpg" alt="background" width="500px" height="250px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs2.png" alt="background" width="500px" height="250px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs3.png" alt="background" width="500px" height="250px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs4.png" alt="background" width="500px" height="250px"/>
 
 </br></br></br></br></br></br></br></br></br>
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
