@@ -1,8 +1,12 @@
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Individual Project - Henry Dogs
-
-<img height="200" src="./dog.png" />
+  <p>Es una aplicación de página única, basada en una api de perros "The Dog API" con el fin de aplicar los conocimientos aprendidos en el bootcamp de SoyHenry realizando diferentes funcionalidades.</br>
+  Desarrollada con tecnologias como React, Redux, Css puro para el FrontEnd, NodeJs, Express, Sequelize para el BackEnd y PostgreSQL para la base de datos.</p>
+</br>
+ <a href="https://pi-dogs-main-pearl.vercel.app/" rel="noopener noreferrer" target="_blank">Sitio WEB</a>
+<p>Te invito a visitar la pagina!</p>
+</br></br></br></br></br></br></br></br></br>
 
 ## Objetivos del Proyecto
 
