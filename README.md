@@ -7,7 +7,7 @@
 <p>Te invito a visitar la pagina!</p>
 <img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs.jpg" alt="background" width="500px" height="250px"/>
 <img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs2.png" alt="background" width="500px" height="250px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/Imagenes/PiDogs3.png" alt="background" width="500px" height="250px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs3.png" alt="background" width="500px" height="250px"/>
 <img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs4.png" alt="background" width="500px" height="250px"/>
 
 <!--
