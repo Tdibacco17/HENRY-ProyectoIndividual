@@ -6,6 +6,7 @@
 </br>
  <a href="https://pi-dogs-main-pearl.vercel.app/" rel="noopener noreferrer" target="_blank">Sitio WEB</a>
 <p>Te invito a visitar la pagina!</p>
+<img src=https://github.com/Tdibacco17/Tdibacco17/blob/main/PiDogs.jpg alt="background" width="400px" height="200px"/>
 </br></br></br></br></br></br></br></br></br>
 
 ## Objetivos del Proyecto
