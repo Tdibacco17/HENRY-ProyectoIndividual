@@ -5,12 +5,13 @@
 </br>
  <a href="https://pi-dogs-main-pearl.vercel.app/" rel="noopener noreferrer" target="_blank">Sitio WEB</a>
 <p>Te invito a visitar la pagina!</p>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs.jpg" alt="background" width="500px" height="250px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs2.png" alt="background" width="500px" height="250px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs3.png" alt="background" width="500px" height="250px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs4.png" alt="background" width="500px" height="250px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs.jpg" alt="background" width="500px" height="250px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs2.png" alt="background" width="500px" height="250px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/Imagenes/PiDogs3.png" alt="background" width="500px" height="250px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs4.png" alt="background" width="500px" height="250px"/>
 
-</br></br></br></br></br></br></br></br></br>
+<!--
+
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Individual Project - Henry Dogs
@@ -201,3 +202,5 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 - [ ] Al menos tener un componente del frontend con sus tests respectivos
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
 - [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+
+-->
