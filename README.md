@@ -1,3 +1,5 @@
+<h1>Henry Dogs App 🐶</h1>  
+<h4>Proyecto individual</h4>
   <p>Es una aplicación de página única, basada en una api de perros "The Dog API" con el fin de aplicar los conocimientos aprendidos en el bootcamp de SoyHenry realizando diferentes funcionalidades.</br>
   Desarrollada con tecnologias como React, Redux, Css puro para el FrontEnd, NodeJs, Express, Sequelize para el BackEnd y PostgreSQL para la base de datos.</p>
 </br>
