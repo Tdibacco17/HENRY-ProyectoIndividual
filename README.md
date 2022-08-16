@@ -1,14 +1,17 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
-
-# Individual Project - Henry Dogs
   <p>Es una aplicación de página única, basada en una api de perros "The Dog API" con el fin de aplicar los conocimientos aprendidos en el bootcamp de SoyHenry realizando diferentes funcionalidades.</br>
   Desarrollada con tecnologias como React, Redux, Css puro para el FrontEnd, NodeJs, Express, Sequelize para el BackEnd y PostgreSQL para la base de datos.</p>
 </br>
  <a href="https://pi-dogs-main-pearl.vercel.app/" rel="noopener noreferrer" target="_blank">Sitio WEB</a>
 <p>Te invito a visitar la pagina!</p>
-<img src=https://github.com/Tdibacco17/Tdibacco17/blob/main/PiDogs.jpg alt="background" width="400px" height="200px"/>
-</br></br></br></br></br></br></br></br></br>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs.jpg" alt="background" width="400px" height="200px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs2.png" alt="background" width="400px" height="200px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs3.png" alt="background" width="400px" height="200px"/>
+<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/PiDogs4.png" alt="background" width="400px" height="200px"/>
 
+</br></br></br></br></br></br></br></br></br>
+![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
+
+# Individual Project - Henry Dogs
 ## Objetivos del Proyecto
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
