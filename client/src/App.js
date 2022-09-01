@@ -5,22 +5,9 @@ import LandingPage from './components/LandingPage';
 import Home from './components/Home';
 import DogCreate from './components/DogCreate';
 import Detail from './components/Detail';
-import { useEffect, useState } from 'react';
 
 function App() {
-  const makeAPICall = async () => {
-    try {
-      const response = await fetch('http://localhost:6813/', {mode:'cors'});
-      const data = await response.json();
-      console.log({ data })
-    }
-    catch (e) {
-      console.log(e)
-    }
-  }
-  useEffect(() => {
-    makeAPICall();
-  }, [])
+
   return (
     <BrowserRouter>
       <div className="App">

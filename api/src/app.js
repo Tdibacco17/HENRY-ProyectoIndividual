@@ -10,7 +10,7 @@ const server = express();
 
 server.name = 'API';
 
-server.use(cors({ origin: true }))
+server.use(cors({origin: "http://localhost:6813"}))
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
@@ -23,7 +23,7 @@ server.use(morgan('dev'));
 //   next();
 // });
 server.use((req,res, next)=>{
-  res.setHeader('Access-Control-Allow-Origin',"http://localhost:6813");
+  res.set('Access-Control-Allow-Origin',"http://localhost:6813");
   res.setHeader('Access-Control-Allow-Headers',"*");
   res.header('Access-Control-Allow-Credentials', true);
   next();
