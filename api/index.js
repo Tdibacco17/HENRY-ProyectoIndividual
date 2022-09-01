@@ -20,10 +20,13 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
+const PORT = process.env.PGPORT || 6813;
+const HOST = process.env.HOST || "0.0.0.0";
+
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   console.log("base de datos conectada!");
-  server.listen(process.env.PORT, () => {
+  server.listen(process.env.PORT,HOST, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
