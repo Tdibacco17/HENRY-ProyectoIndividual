@@ -24,9 +24,9 @@ const PORT = process.env.PGPORT || 6813;
 const HOST = process.env.HOST || "0.0.0.0";
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(() => {
+conn.sync({ force: true }).then(() => {
   console.log("base de datos conectada!");
-  server.listen(process.env.PORT,HOST, () => {
+  server.listen(PORT,HOST, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
