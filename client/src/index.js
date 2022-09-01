@@ -10,7 +10,7 @@ import axios from "axios";
 import dotenv from "dotenv";
 dotenv.config();
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:6813";
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3000";
 
 ReactDOM.render(
   <Provider store = {store}>
