@@ -9,8 +9,9 @@ require('./db.js');
 const server = express();
 
 server.name = 'API';
+whiteList = ["https://app-proyecto-individual.vercel.app/dogs", "https://pi-dogs-main-pearl.vercel.app"]
 
-server.use(cors({origin: ["http://localhost:6813"]}))
+server.use(cors({origin: whiteList}))
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
