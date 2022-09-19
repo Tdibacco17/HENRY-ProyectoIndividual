@@ -2,46 +2,51 @@ const { Dog, Temperament } = require('../db.js');
 const { allDogs, getTemperamentsFromApi, findNameInApi } = require("./functions.js")
 
 const getDogs = async (req, res) => { // obtener todos los perros y filtrar por nombre 
-
     const { name } = req.query;
-    let result;
+
     try {
+        let result;
         let totalDogs = await allDogs();
+        if (typeof name === "number") return res.json([]);
         if (name) {
             result = totalDogs.filter(e => e.name.toLowerCase().includes(name.toLowerCase()));
         } else {
             result = totalDogs;
         }
-        if (result.length === 0) return res.status(404).json({ error: "The dog does not exist" });
-        res.status(200).json(result);
-    } catch {
-        res.status(404).json({ error: "Hubo un error..." });
+        if (result.length === 0) return res.json([]);
+        return res.status(200).json(result);
+    } catch (e) {
+        console.log(e);
+        return res.json([]);
     }
 };
 
 const getDogId = async (req, res) => {  // filtro de perros por id
     const { idRaza } = req.params;
-    let totalDogs = await allDogs();
+    
     try {
+        let totalDogs = await allDogs();
         result = totalDogs.filter(e => e.id == idRaza);
-        if (result.length === 0) return res.status(404).json({ error: "No existe el perro con dicho Id" });
-        res.status(200).json(result);
-    } catch {
-        res.status(404).json({ error: "Hubo un error..." });
+        if (result.length === 0) return res.json([]);
+
+        return res.status(200).json(result);
+    } catch(e) {
+        console.log(e);
+        return res.json([]);
     }
 };
 
 const postDogs = async (req, res) => {  // crear un perro
-    const { name, height_min, height_max, weight_min, weight_max, year_min, year_max, origin, image, temperament } = req.body;
+    const { name, height_min, height_max, weight_min, weight_max, year_min, year_max, image, temperament } = req.body;
 
-    if (!name || !height_min || !weight_min) return res.status(404).json({ error: "Falta enviar datos obligatorios" });
+    if (!name || !height_min || !weight_min) return res.json({ msg: "Falta enviar datos obligatorios" });
 
     if (name) {
-        if (await findNameInApi(name)) return res.status(404).json({ error: "the Dog already exists..." }); // valido en api
+        if (await findNameInApi(name)) return res.status(200).json({ msg: "the Dog already exists..." }); // valido en api
         let findDogNameInDB = await Dog.findOne({
             where: { name: name.toLowerCase() }
         });
-        if (findDogNameInDB) return res.status(404).json({ error: "the Dog already exists..." }); //valido en db
+        if (findDogNameInDB) return res.status(200).json({ msg: "the Dog already exists..." }); //valido en db
     }
 
     try {
@@ -59,9 +64,9 @@ const postDogs = async (req, res) => {  // crear un perro
             where: { name: temperament }
         });
         await dog.addTemperament(findTempDog);
-        res.status(200).json("Created Dog!");
-    } catch {
-        res.status(404).send({ error: "Error en alguno de los datos provistos" });
+        return res.status(200).json({msg: "Created Dog!"});
+    } catch(e) {
+        console.log(e);
     }
 };
 
@@ -91,7 +96,7 @@ const getTemperaments = async (req, res) => { // muestro todos los temperamentos
         let tempers = await Temperament.findAll();
         return res.json(tempers);
     } catch {
-        res.status(404).json({ error: "Hubo un error..." });
+       console.log(e)
     }
 };
 
@@ -99,12 +104,14 @@ const deleteDog = async (req, res) => {
     const { idRaza } = req.params
 
     try {
+        if(!idRaza || idRaza === ":idRaza") return res.json({msg: "Falta un id para eliminar al perro"})
         let deleteDog = await Dog.destroy({
             where: { id: idRaza }
         })
-        res.status(200).json('Dog Deleted')
-    } catch (error) {
-        res.status(404).json(error.message)
+        
+        return res.status(200).json({msg: 'Dog Deleted'})
+    } catch (e) {
+        console.log(e.menssage)
     }
 }
 
