@@ -27,6 +27,6 @@ const HOST = process.env.HOST || "0.0.0.0";
 conn.sync({ force: true }).then(() => {
   console.log("base de datos conectada!");
   server.listen(PORT,HOST, () => {
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+    console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
   });
 });
