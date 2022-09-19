@@ -65,19 +65,27 @@ const postDogs = async (req, res) => {  // crear un perro
     }
 };
 
-const getTemperaments = async (req, res) => { // muestro todos los temperamentos y los levanto en la base datos
-    const upTemperaments = await getTemperamentsFromApi();
+const temperamentsDataBase = async () => {
+    try{
+        const upTemperaments = await getTemperamentsFromApi();
 
-    const arrayTemps = upTemperaments.map(e => e.name.split(", "));
-    let setTemp = new Set (arrayTemps.flat()); // flat crea una nueva matriz con todos los elementos de sub-array [1.2[3.4]]
-                                                //new set hace que no se repitan los mismos valores
-    for (e of setTemp) {
-        if (e) await Temperament.findOrCreate({
-        where: { 
-            name: e 
-        }});
+        const arrayTemps = upTemperaments.map(e => e.name.split(", "));
+        let setTemp = new Set (arrayTemps.flat()); // flat crea una nueva matriz con todos los elementos de sub-array [1.2[3.4]]
+                                                    //new set hace que no se repitan los mismos valores
+        for (e of setTemp) {
+            if (e) await Temperament.findOrCreate({
+            where: { 
+                name: e 
+            }});
+        }
+        return res.json("Todo OK")
+    }catch(e){
+        console.log(e)
     }
-    
+}
+
+const getTemperaments = async (req, res) => { // muestro todos los temperamentos y los levanto en la base datos
+        
     try{    
         let tempers = await Temperament.findAll();
         res.json(tempers);
@@ -104,5 +112,6 @@ module.exports = {
     postDogs,
     getDogId,
     getDogs,
-    deleteDog
+    deleteDog,
+    temperamentsDataBase
 }
