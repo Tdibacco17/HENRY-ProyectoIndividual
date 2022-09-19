@@ -70,6 +70,7 @@ const postDogs = async (req, res) => {  // crear un perro
     }
 };
 
+//CARGAR DATABASE
 const temperamentsDataBase = async () => {
     try {
         const upTemperaments = await getTemperamentsFromApi();

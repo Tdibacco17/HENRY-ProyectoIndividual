@@ -94,6 +94,6 @@ describe("GET /temperaments", () => {
     test("devolver status 200 y todos los temperamentos", async () => {
         const response = await agent.get("/temperaments")
         expect(response.statusCode).toBe(200)
-        expect(response.body).toHaveLength(20)
+        expect(response.body).toHaveLength(54)
     })
 })
