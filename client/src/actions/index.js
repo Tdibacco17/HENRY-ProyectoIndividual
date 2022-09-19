@@ -4,7 +4,6 @@ import axios from 'axios';
 export function postDog(payload) { // crear perro
     return async function(dispatch){
         const response = await axios.post(`/dogs`,payload);
-        console.log(response);
         return response;
     };
 };

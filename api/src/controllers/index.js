@@ -80,7 +80,7 @@ const getTemperaments = async (req, res) => { // muestro todos los temperamentos
     
     try{    
         let tempers = await Temperament.findAll();
-        res.send(tempers);
+        res.json(tempers);
     }catch{
         res.status(404).json({error: "Hubo un error..."});
     }

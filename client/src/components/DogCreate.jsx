@@ -90,11 +90,10 @@ function handleChange(e){
         ...input,
         [e.target.name]: e.target.value
     }));
-    console.log(input)
 };
 
 function handleSelect(e){
-    const temperamento = input.temperament.includes(e.target.value) ? 
+    input.temperament.includes(e.target.value) ? 
     alert("equal temperaments cannot be added"):  
     setInput({
         ...input,
@@ -107,12 +106,10 @@ function handleDelete(e){
         ...input,
         temperament: [] 
     });
-    console.log(input)
 }
 
 function handleSubmit(e){
     e.preventDefault();
-    console.log(input)
     dispatch(postDog(input));
     alert("CREATED DOG!");
     setInput({
