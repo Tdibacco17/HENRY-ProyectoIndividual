@@ -8,6 +8,6 @@ router.get("/dogs/:idRaza", getDogId);
 router.post("/dogs", postDogs);
 router.get("/temperaments", getTemperaments );
 router.delete("/dogs/:idRaza", deleteDog);
-// router.get("/temperamentsDataBase", temperamentsDataBase)
+router.get("/temperamentsDataBase", temperamentsDataBase)
 
 module.exports = router;
