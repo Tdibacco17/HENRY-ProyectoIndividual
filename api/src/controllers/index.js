@@ -70,9 +70,10 @@ const postDogs = async (req, res) => {  // crear un perro
     }
 };
 
-//CARGAR DATABASE
-const temperamentsDataBase = async () => {
+const getTemperaments = async (req, res) => { // muestro todos los temperamentos y los levanto en la base datos
+
     try {
+        //CARGAR DATABASE
         const upTemperaments = await getTemperamentsFromApi();
 
         const arrayTemps = upTemperaments.map(e => e.name.split(", "));
@@ -85,15 +86,6 @@ const temperamentsDataBase = async () => {
                 }
             });
         }
-        return res.json("Todo OK")
-    } catch (e) {
-        console.log(e)
-    }
-}
-
-const getTemperaments = async (req, res) => { // muestro todos los temperamentos y los levanto en la base datos
-
-    try {
         let tempers = await Temperament.findAll();
         return res.json(tempers);
     } catch {
@@ -122,5 +114,4 @@ module.exports = {
     getDogId,
     getDogs,
     deleteDog,
-    temperamentsDataBase
 }
