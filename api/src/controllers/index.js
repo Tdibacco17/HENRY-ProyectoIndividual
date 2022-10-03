@@ -4,6 +4,19 @@ const { allDogs, getTemperamentsFromApi, findNameInApi } = require("./functions.
 const getDogs = async (req, res) => { // obtener todos los perros y filtrar por nombre 
     const { name } = req.query;
 
+            //CARGAR DATABASE
+            const upTemperaments = await getTemperamentsFromApi();
+
+            const arrayTemps = upTemperaments.map(e => e.name.split(", "));
+            let setTemp = new Set(arrayTemps.flat()); // flat crea una nueva matriz con todos los elementos de sub-array [1.2[3.4]]
+            //new set hace que no se repitan los mismos valores
+            for (e of setTemp) {
+                if (e) await Temperament.findOrCreate({
+                    where: {
+                        name: e
+                    }
+                });
+            }
     try {
         let result;
         let totalDogs = await allDogs();
