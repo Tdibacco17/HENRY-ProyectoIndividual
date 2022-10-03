@@ -3,7 +3,7 @@
   <p>Es una aplicación de página única, basada en una api de perros "The Dog API" con el fin de aplicar los conocimientos aprendidos en el bootcamp de SoyHenry realizando diferentes funcionalidades.</br>
   Desarrollada con tecnologias como React, Redux, Css puro para el FrontEnd, NodeJs, Express, Sequelize para el BackEnd y PostgreSQL para la base de datos.</p>
 </br>
- <a href="https://pi-dogs-main-pearl.vercel.app/" rel="noopener noreferrer" target="_blank">Sitio WEB</a>
+ <a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">Sitio WEB</a>
 <p>Te invito a visitar la pagina!</p>
 <img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs.jpg" alt="background" width="500px" height="250px"/>
 <img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs2.png" alt="background" width="500px" height="250px"/>
