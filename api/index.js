@@ -20,8 +20,8 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
-const PORT = process.env.PORT || 3000; 
-const HOST = process.env.HOST || "0.0.0.0";
+const PORT = process.env.PGPORT || 3000; 
+const HOST = process.env.PGHOST || "0.0.0.0";
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
