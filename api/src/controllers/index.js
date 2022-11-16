@@ -87,18 +87,18 @@ const getTemperaments = async (req, res) => { // muestro todos los temperamentos
 
     try {
         //CARGAR DATABASE
-        const upTemperaments = await getTemperamentsFromApi();
+        // const upTemperaments = await getTemperamentsFromApi();
 
-        const arrayTemps = upTemperaments.map(e => e.name.split(", "));
-        let setTemp = new Set(arrayTemps.flat()); // flat crea una nueva matriz con todos los elementos de sub-array [1.2[3.4]]
-        //new set hace que no se repitan los mismos valores
-        for (e of setTemp) {
-            if (e) await Temperament.findOrCreate({
-                where: {
-                    name: e
-                }
-            });
-        }
+        // const arrayTemps = upTemperaments.map(e => e.name.split(", "));
+        // let setTemp = new Set(arrayTemps.flat()); // flat crea una nueva matriz con todos los elementos de sub-array [1.2[3.4]]
+        // //new set hace que no se repitan los mismos valores
+        // for (e of setTemp) {
+        //     if (e) await Temperament.findOrCreate({
+        //         where: {
+        //             name: e
+        //         }
+        //     });
+        // }
         let tempers = await Temperament.findAll();
         return res.json(tempers);
     } catch {
