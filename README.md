@@ -16,7 +16,19 @@
 
 </br>
 
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs.jpg" alt="background" width="500px" height="250px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs2.png" alt="background" width="500px" height="250px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs3.png" alt="background" width="500px" height="250px"/>
-<img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs4.png" alt="background" width="500px" height="250px"/>
+<a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">
+   <img align="right" width="450px" height="225px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs2.png">
+</a>
+
+<a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">
+   <img width="450px" height="225px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs.jpg">
+</a>
+
+<a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">
+   <img align="right" width="450px" height="225px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs3.png">
+</a>
+
+<a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">
+   <img width="450px" height="225px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs4.png">
+</a>
+
