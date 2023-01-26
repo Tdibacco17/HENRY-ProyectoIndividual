@@ -16,10 +16,10 @@
 >  
 >  +  **Desarrollo del BackEnd con Javascript, consumiendo datos desde una API, manejo de sistema CRUD y modelado de la base de datos con Node.Js y PostgreSQL.**
 >  +  **Desarrollo del FrontEnd con Javascript, modelado y creación de componentes responsive en React utilizando Redux.**
-
----
  
 </details>
+
+---
 
 ### [SITIO WEB](https://app-dogs-tomas-di-bacco.vercel.app/) 
 
