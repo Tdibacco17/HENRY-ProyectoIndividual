@@ -10,8 +10,6 @@
 
 ---
 
-</br>
-
 ### [SITIO WEB](https://app-dogs-tomas-di-bacco.vercel.app/) 
 
 ###### *Imagenes por si la pagina no carga!*
