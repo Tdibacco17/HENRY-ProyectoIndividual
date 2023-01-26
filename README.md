@@ -11,8 +11,11 @@
 ---
 
 </br>
- <a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">Sitio WEB</a>
-<p>Te invito a visitar la pagina!</p>
+
+###### *Imagenes por si la pagina no carga!*
+
+</br>
+
 <img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs.jpg" alt="background" width="500px" height="250px"/>
 <img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs2.png" alt="background" width="500px" height="250px"/>
 <img src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs3.png" alt="background" width="500px" height="250px"/>
