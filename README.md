@@ -1,4 +1,4 @@
-# [Academic] Full-Stack Developer - [THE DOG API](https://app-dogs-tomas-di-bacco.vercel.app/) 
+### [Academic] Full-Stack Developer - [THE DOG API](https://app-dogs-tomas-di-bacco.vercel.app/) 
 
 
 >  ##### Proyecto individual
