@@ -1,9 +1,9 @@
 .cardDog {
     background: #2B3A55;
-    width: 300px;
+    width: 270px;
     height: 375px;
-    margin: 30px 5px 30px 5px;
     border-radius: 8px;
+    margin-bottom: 45px;
 
     box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.9);
     overflow: hidden;
@@ -12,18 +12,18 @@
 
 .cardDog img {
     border-radius: 8px 8px 0px 0px;
-    width: 300px;
+    width: 270px;
     height: 225px;
     display: block;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 1%;
     background: #2B3A55;
     padding: 0px;
     margin: 0px;
 }
 
 .card_body {
-    width: 300px;
+    width: 270px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -56,12 +56,4 @@
 .cardDog:hover {
     opacity: 1;
     transition: 0.2s;
-}
-
-@media screen and (max-width: 1250px) {
-
-    .cardDog {
-        width: 280px;
-    }
-
 }

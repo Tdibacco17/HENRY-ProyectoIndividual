@@ -1,10 +1,11 @@
 .contenedorCards {
-    margin-top: 160px;
-    margin-bottom: 120px;
+    margin-top: 235px;
+    margin-bottom: 150px;
 }
 
 .container_card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 25px;
 }
