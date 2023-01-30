@@ -8,7 +8,7 @@ module.exports = (sequelize) => {
       type: DataTypes.UUID,  //algoritmo que genera numero aletatorio
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
-      primaryKey: true, 
+      primaryKey: true,
     },
     name: { //nombre raza
       type: DataTypes.STRING,
@@ -41,8 +41,8 @@ module.exports = (sequelize) => {
     image: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: 
-      'https://www.clarin.com/img/2021/07/24/llegan-a-pesar-mas-de___yqKyyB2BQ_720x0__1.jpg'
+      defaultValue:
+        'https://www.clarin.com/img/2021/07/24/llegan-a-pesar-mas-de___yqKyyB2BQ_720x0__1.jpg'
     },
     createdInDb: {
       type: DataTypes.BOOLEAN,

@@ -4,9 +4,16 @@ const fs = require('fs');
 const path = require('path');
 const { pg } = require('pg');
 
-const { PGUSER, PGPASSWORD, PGHOST, PGPORT, PGDATABASE } = process.env;
+// const { PGUSER, PGPASSWORD, PGHOST, PGPORT, PGDATABASE } = process.env;
 
-const sequelize = new Sequelize(`postgresql://${ PGUSER }:${ PGPASSWORD }@${ PGHOST }:${ PGPORT }/${PGDATABASE }`, {
+// const sequelize = new Sequelize(`postgresql://${ PGUSER }:${ PGPASSWORD }@${ PGHOST }:${ PGPORT }/${PGDATABASE }`, {
+//   logging: false, // set to console.log to see the raw SQL queries
+//   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+//   dialectModule: pg
+// });
+
+const { LOCALUSER, LOCALPASSWORD, LOCALHOST, LOCALPORT, LOCALDATABASE } = process.env;
+const sequelize = new Sequelize(`postgresql://${LOCALUSER}:${LOCALPASSWORD}@${LOCALHOST}:${LOCALPORT}/${LOCALDATABASE}`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   dialectModule: pg
@@ -40,7 +47,7 @@ const { Dog, Temperament } = sequelize.models;
 
 Dog.belongsToMany(Temperament, { through: 'dog_temperament' });
 Temperament.belongsToMany(Dog, { through: 'dog_temperament' });
- 
+
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');

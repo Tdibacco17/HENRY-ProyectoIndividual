@@ -20,13 +20,39 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
-const PORT = process.env.PGPORT || 6815; 
-// const HOST = process.env.PGHOST || "0.0.0.0";
+const cluster = require("node:cluster")
+const { cpus } = require("node:os");
+const process = require("node:process")
 
-// Syncing all the models at once.
-conn.sync({ force: false }).then(() => {
-  console.log("base de datos conectada!");
-  server.listen(PORT, () => {
-    console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
+const numCPUs = cpus().length;
+
+if (cluster.isPrimary) {
+  console.log(`Primary ${process.pid} is running`);
+
+  // Fork workers.
+  for (let i = 0; i < numCPUs - 1; i++) {
+    cluster.fork();
+  }
+
+  cluster.on("exit", (worker, code, signal) => {
+    console.log(`worker ${worker.process.pid} died`);
+    // Restart worker process if died
+    cluster.fork();
   });
-});
+
+} else {
+
+  const PORT = 3000; //process.env.PGPORT ||
+  const HOST = "0.0.0.0"; // process.env.PGHOST ||
+
+  // Syncing all the models at once.
+  conn.sync({ force: false }).then(() => {
+    console.log("base de datos conectada!");
+
+    server.listen(PORT, HOST, () => {
+      console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
+    });
+  });
+
+}
+

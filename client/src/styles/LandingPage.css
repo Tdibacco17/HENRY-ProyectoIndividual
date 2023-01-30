@@ -1,36 +1,92 @@
-.landingBtn {
-    background:rgba(168, 164, 164, 0.568);
-    width: 100px;
-    height: 50px;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 2px  rgba(168, 164, 164, 0.568);
+.contenedorLanding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.contenedorLanding h1 {
+    font-weight: 600;
+    font-size: 3.6rem;
+    letter-spacing: 6px;
+}
+
+.contenedorLanding h2 {
+    font-weight: 400;
+    font-size: 2.8rem;
     cursor: pointer;
-    font-family: 'LatoBlack';
-    font-size: 18px;
+    margin: 0px;
+    margin-top: 50px;
+    transition: 0.7s;
+    padding: 15px;
+    border-radius: 15px;
+    letter-spacing: 3px;
 }
 
-.landingBtn:hover {
-    background: rgba(255, 255, 255, 0.301);
-    border: 2px  rgba(255, 255, 255, 0.301);
+.contenedorLanding h2:hover {
     transition: 0.3s;
+    color: white;
+    background: #183834;
 }
 
-.byTomas {
-    color: black;
-    
+.contenedorLanding h4 {
+    margin-top: -25px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
 }
 
-/* @media screen and (max-width: 1250px){
-    .landingBtn  {
-    position: relative;
-    top: 140px;
+.contenedorLanding small {
+    margin-top: -35px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+
+@media screen and (max-width: 625px) {
+    .contenedorLanding h1 {
+        font-size: 3.4rem;
     }
 
-    .byTomas {
-        position: relative;
-        top: 140px; 
+    .contenedorLanding h2 {
+        font-size: 2.6rem;
     }
 
-} */
+    .contenedorLanding h4 {
+        font-size: 1.6rem;
+        margin-top: -5px;
+
+    }
+
+    .contenedorLanding small {
+        font-size: 1.1rem;
+        margin-top: -15px;
+
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .contenedorLanding h1 {
+        font-size: 3.2rem;
+    }
+
+    .contenedorLanding h2 {
+        font-size: 2.4rem;
+    }
+
+    .contenedorLanding h4 {
+        font-size: 1.4rem;
+        margin-top: -5px;
+    }
+
+    .contenedorLanding small {
+        font-size: 1rem;
+        margin-top: -15px;
+    }
+}

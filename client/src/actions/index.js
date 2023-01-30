@@ -2,56 +2,70 @@
 import axios from 'axios';
 
 export function postDog(payload) { // crear perro
-    return async function(dispatch){
-        const response = await axios.post(`/dogs`,payload);
+    return async function (dispatch) {
+        const response = await axios.post(`/dogs`, payload);
         return response;
     };
 };
 
 export function getAllDogs() { // traerme todos los perros
-    return async function(dispatch){
+    return async function (dispatch) {
         let json = await axios.get(`/dogs`);
         return dispatch({
             type: 'GET_ALL_DOGS',
-            payload: json.data
+            payload: json.data.result
         });
     };
 };
 
 export function getDogByName(name) { // filtrar perro por name
-    return async function(dispatch){
-        try{ 
+    return async function (dispatch) {
+        try {
             let json = await axios.get(`/dogs?name=${name}`);
-            return dispatch({
-                type: 'GET_DOG_BY_NAME',
-                payload: json.data
-            });
-        }catch(error) {
-            alert(error.response.data.error);
+
+            if (json.data.result.length === 0) {
+                alert(json.data.msg);
+                return
+            } else {
+                return dispatch({
+                    type: 'GET_DOG_BY_NAME',
+                    payload: json.data.result
+                });
+            }
+        } catch (error) {
+            alert(error.response.data.msg);
         }
     };
 };
 
 export function getDogById(id) { // filtrar perro por id
-    return async function(dispatch){
-        try{
+    return async function (dispatch) {
+        try {
             let json = await axios.get(`/dogs/${id}`);
-            return dispatch({
-                type: 'GET_DOG_BY_ID',
-                payload: json.data
-            });
-        } catch(error) {
-            console.log(error);
+
+            if (json.data.result.length === 0) {
+                alert(json.data.msg);
+                return
+            } else {
+                return dispatch({
+                    type: 'GET_DOG_BY_ID',
+                    payload: json.data.result
+                });
+            }
+        } catch (error) {
+            alert(error.response.data.msg);
         }
     };
 };
 
 export function getTemperaments() { // me traigo todos los temperamentos
-    return async function(dispatch){
+    return async function (dispatch) {
+
         let json = await axios.get(`/temperaments`);
+
         return dispatch({
             type: 'GET_TEMPERAMENTS',
-            payload: json.data
+            payload: json.data.result
         });
     };
 };
@@ -84,12 +98,12 @@ export function orderByWeight(payload) {//ordenamiento de peso
     };
 };
 
-export function deleteDog(id){
-    return async function(dispatch){
-            let json = await axios.delete(`/dogs/${id}`)
-            return dispatch({
-                type: "DELETE_DOG",
-                payload: json
-            });
+export function deleteDog(id) {
+    return async function (dispatch) {
+        let json = await axios.delete(`/dogs?idRaza=${id}`)
+        return dispatch({
+            type: "DELETE_DOG",
+            payload: json.data
+        });
     };
 };
