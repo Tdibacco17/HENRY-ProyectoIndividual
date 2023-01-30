@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Detail.css";
 import FooterContainer from "../../containers/FooterContainer/FooterContainer";
+import NavbarContainer from "../../containers/NavbarContainer/NavbarContainer";
 
 
 export default function DetailComponent({ myDog, handleClick }) {
 
     return (
         <div>
+            <NavbarContainer />
             <Link to="/home"><button className="detailBtn">Home</button></Link>
             {
                 myDog.length > 0 ?

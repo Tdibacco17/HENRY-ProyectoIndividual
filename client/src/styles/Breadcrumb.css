@@ -1,0 +1,51 @@
+.container_all_breadcrumb {
+    position: fixed;
+    top: 81px;
+    left: 0px;
+    z-index: 3;
+    
+    width: 100%;
+    height: 20px;
+    background-color: #183834;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0px solid rgb(133, 130, 130);
+    border-bottom: 2px solid rgb(133, 130, 130);
+    box-shadow: 0px 35px 35px rgba(0, 0, 0, 55%);
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.bradcrumb_allfilter {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.bradcrumb_allfilter select {
+    background: none;
+    border: none;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+
+    font-family: 'LatoBlack';
+    outline: 0;
+    border: 0 !important;
+}
+
+.bradcrumb_allfilter select option {
+    color: #183834;
+}
+
+.bradcrumb_allfilter select:hover {
+    color: rgb(133, 130, 130);
+    transition: 0.2s;
+}

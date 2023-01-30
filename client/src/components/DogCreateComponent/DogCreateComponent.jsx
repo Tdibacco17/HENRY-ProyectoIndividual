@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import FooterContainer from "../../containers/FooterContainer/FooterContainer";
+import NavbarContainer from "../../containers/NavbarContainer/NavbarContainer";
 import "../../styles/DogCreate.css";
 
 export default function DogCreateComponent({ handleSubmit, input, errors, handleSelect, handleChange,
@@ -7,6 +8,7 @@ export default function DogCreateComponent({ handleSubmit, input, errors, handle
 
     return (
         <div>
+            <NavbarContainer />
             <Link to="/home"><button className="dogBackBtn"> Back </button></Link>
 
             <div className="contenedor">

@@ -1,42 +1,82 @@
-.searchBtn {
-    background:rgba(128, 128, 128, 0.678);
-    width: 100px;
-    height: 32px;
-    color: black;
-    font-weight: bold;
-    border-radius: 0px 5px 5px 0px;
-    border: 2px  rgba(128, 128, 128, 0.678);
-    cursor: pointer;
-    font-family: 'LatoBlack';
-    font-size: 16px;
-}
-
-.searchBtn:hover {
-    background: rgba(255, 255, 255, 0.301);
-    border: 2px  rgba(255, 255, 255, 0.301);
-    transition: 0.3s;
-}
-
-.inputCss {
-    background:rgba(128, 128, 128, 0.678);
-    height: 25px;
-    max-width: 200px;
-    padding: 3.5px;
-    color: black;
-    font-size: 15px;
-    border: 2px  rgba(128, 128, 128, 0.678);
-    border-radius:  5px 0px 0px 5px;
-    font-family: 'LatoBlack';
-    font-size: 16px;
-}
-.inputCss::placeholder{
-    color: rgb(211, 208, 208);
-}
-
-.inputBtn {
+.container_all_searchbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid white;
+    transition: 0.2s;
 }
 
+.container_all_searchbar:hover {
+    border-bottom: 2px solid rgb(133, 130, 130);
+    transition: 0.2s;
+}
+
+.container_all_searchbar input {
+    color: white;
+    padding-left: 15px;
+
+    background: none;
+    border: transparent;
+    border-radius: 0px;
+    outline: 0px;
+
+    margin-right: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-family: 'LatoBlack';
+}
+
+.container_all_searchbar input::placeholder {
+    color: white;
+    font-size: 0.9rem;
+    font-family: 'LatoBlack';
+    letter-spacing: 1px;
+}
+
+.container_all_searchbar button {
+    border: none;
+    border-radius: 0px;
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.container_all_searchbar button:hover {
+    color: rgb(133, 130, 130);
+    transition: 0.2s;
+}
+
+
+.navbar_center {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.navbar_center_btn {
+    background: none;
+    border: none;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px
+}
+
+.navbar_center_btn:hover {
+    color: rgb(133, 130, 130);
+    transition: 0.2s;
+}
+
+.navbar_center_btn small {
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}

@@ -32,7 +32,7 @@ body {
 }
 
 .icon_footer {
-  font-size: 38px;
+  font-size: 32px;
   margin: 0px 30px;
   color: white;
   transition: 0.2s;
@@ -44,7 +44,7 @@ body {
 }
 
 .contenedorFooter img {
-  height: 38px;
+  height: 36px;
   width: auto;
 }
 
@@ -56,12 +56,12 @@ body {
 
 @media screen and (max-width: 992px) {
   .icon_footer {
-    font-size: 34px;
+    font-size: 30px;
     margin: 0px 15px;
   }
 
   .contenedorFooter img {
-    height: 34px;
+    height: 32px;
     width: auto;
   }
 }
@@ -72,7 +72,7 @@ body {
     height: 145px;
   }
   .icon_footer {
-    font-size: 32px;
+    font-size: 28px;
     margin: 0px 10px;
   }
 

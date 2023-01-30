@@ -1,36 +1,31 @@
-.paginado{
-    display: inline-flex;
-    font-weight: bolder;
+.breadcrumb_paginado {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
 }
 
-.paginado li {
-    display: inline;
-    background:rgba(255, 255, 255, 0.5);
-    color: black;
-    padding: 6px 12px;
-    margin: 0 2px;
-    width: 25px;
-    font-size: 20px;
+.breadcrumb_paginado p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+
     font-family: 'LatoBlack';
-    border-radius: 5px;
-    border: 2px rgba(255, 255, 255, 0.5);   
+}
+
+.breadcrumb_paginado button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    transition: 0.2s;
     cursor: pointer;
-    
+    padding: 10px;
 }
 
-.paginado li:hover {
-    background-color: rgba(255, 255, 255, 0.301);
-    border: 2px  rgba(255, 255, 255, 0.301);
-}
-
-.contenedorPaginado {
-    background-color: rgba(128, 128, 128, 0.850);
-    
-}
-
-.loading {
-    background-color: none;
-
+.breadcrumb_paginado button:hover {
+    color: rgb(133, 130, 130);
+    transition: 0.2s;
 }
 
 @media screen and (max-width: 1250px){

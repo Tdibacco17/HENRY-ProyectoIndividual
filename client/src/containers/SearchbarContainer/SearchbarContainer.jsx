@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { getDogByName } from "../../actions";
 import SearchBarComponent from "../../components/SearchbarComponent/SearchBarComponent";
 
-export default function SearchBarContainer({ setPage, name, setName }) {
+export default function SearchBarContainer({ setPage, name, setName, handleClick }) {
 
     const dispatch = useDispatch();
 
@@ -27,6 +27,6 @@ export default function SearchBarContainer({ setPage, name, setName }) {
         }
     }
 
-    return <SearchBarComponent name={name} handleEnter={handleEnter}
-     handleInputChange={handleInputChange} handleSubmit={handleSubmit}/>
+    return <SearchBarComponent name={name} handleEnter={handleEnter} handleClick={handleClick}
+        handleInputChange={handleInputChange} handleSubmit={handleSubmit} />
 };
