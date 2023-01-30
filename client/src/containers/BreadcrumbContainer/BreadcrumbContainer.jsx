@@ -4,13 +4,13 @@ import { useDispatch } from "react-redux";
 import BreadcrumbComponent from "../../components/BreadcrumbComponent/BreadcrumbComponent";
 import { getAllDogs, filterTemperaments, filterCreated, orderByName, orderByWeight } from "../../actions/index";
 
-export default function BreadcrumbContainer({ setPage, totalCount, temperamentos, pageSize, setInput, input, allDogs, page }) {
+export default function BreadcrumbContainer({ children, isShowHamburger, setPage, totalCount, temperamentos, pageSize, setInput, input, allDogs, page }) {
 
     const dispatch = useDispatch();
 
     //searchbar
     const [name, setName] = useState("");
-    
+
     // eslint-disable-next-line
     const [order, setOrder] = useState("");
     // eslint-disable-next-line
@@ -49,7 +49,7 @@ export default function BreadcrumbContainer({ setPage, totalCount, temperamentos
         setOrder2(`Ordenado ${e.target.value}`);
     };
 
-    return <BreadcrumbComponent handleSort={handleSort} handleWeight={handleWeight} handleCreated={handleCreated}
-        handleTemperament={handleTemperament} temperamentos={temperamentos} handleClick={handleClick} name={name} setName={setName}
+    return <BreadcrumbComponent handleSort={handleSort} handleWeight={handleWeight} handleCreated={handleCreated} isShowHamburger={isShowHamburger}
+        handleTemperament={handleTemperament} temperamentos={temperamentos} handleClick={handleClick} name={name} setName={setName} children={children}
         pageSize={pageSize} setInput={setInput} input={input} setPage={setPage} allDogs={allDogs} totalCount={totalCount} page={page} />
 }

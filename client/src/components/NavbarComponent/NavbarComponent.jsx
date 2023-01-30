@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { UseWindowSize } from "../../hooks/UseWindowSize"
 import { IoMenuSharp } from "react-icons/io5"
 
-export default function NavbarComponent({ children }) {
+export default function NavbarComponent({ children, setIsShowHamburger, isShowHamburger }) {
 
     const { width } = UseWindowSize()
 
@@ -14,7 +14,12 @@ export default function NavbarComponent({ children }) {
                 <img className="imgLogoDog" src={require("../../img/dog.png").default} alt="icon_proyect" />
                 <h2>HOME</h2>
             </Link>
-            {children}
+            {
+                width <= 992 && <button onClick={() => setIsShowHamburger(!isShowHamburger)} className="hamburger"><IoMenuSharp /></button>
+            }
+            {
+                width > 992 && <>{children} </>
+            }
             {
                 width > 992
                 && <div className="navbar_right">
@@ -23,9 +28,7 @@ export default function NavbarComponent({ children }) {
                     </Link>
                 </div>
             }
-            {
-                width <= 992 && <button className="hamburger"><IoMenuSharp /></button>
-            }
+
         </div>
     )
 }

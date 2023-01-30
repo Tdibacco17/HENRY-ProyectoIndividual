@@ -10,15 +10,17 @@ import NavbarContainer from "../../containers/NavbarContainer/NavbarContainer";
 import BreadcrumbContainer from "../../containers/BreadcrumbContainer/BreadcrumbContainer";
 
 export default function HomeComponent({ temperamentos, handleClick, page, pageSize, setPage,
-    totalCount, setInput, input, allDogs, name, setName }) {
+    totalCount, setInput, input, allDogs, name, setName, isShowHamburger, setIsShowHamburger }) {
 
     return (
         <>
-            <NavbarContainer>
+            <NavbarContainer isShowHamburger={isShowHamburger} setIsShowHamburger={setIsShowHamburger}>
                 <SearchBarContainer handleClick={handleClick} setPage={setPage} name={name} setName={setName} />
             </NavbarContainer>
-            <BreadcrumbContainer setPage={setPage} totalCount={totalCount} temperamentos={temperamentos}
-                pageSize={pageSize} setInput={setInput} input={input} allDogs={allDogs} page={page} />
+            <BreadcrumbContainer isShowHamburger={isShowHamburger} setPage={setPage} totalCount={totalCount} temperamentos={temperamentos}
+                pageSize={pageSize} setInput={setInput} input={input} allDogs={allDogs} page={page} >
+                <SearchBarContainer handleClick={handleClick} setPage={setPage} name={name} setName={setName} />
+            </BreadcrumbContainer >
 
             <div className="contenedorCards">
                 <div className="container_card">

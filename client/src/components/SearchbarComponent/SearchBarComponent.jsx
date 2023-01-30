@@ -9,8 +9,6 @@ export default function SearchBarComponent({ handleInputChange, handleSubmit, na
 
     return (
         <>
-            {
-                width > 992 &&
                 < div className="navbar_center" >
                     <div className="container_all_searchbar">
                         <input
@@ -26,8 +24,6 @@ export default function SearchBarComponent({ handleInputChange, handleSubmit, na
                     </div>
                     <button className="navbar_center_btn" onClick={(e) => handleClick(e)}><IoReload className="cotainer_icon_searchbar"/> <small>RELOAD</small></button>
                 </div >
-            }
         </>
-
     )
 };

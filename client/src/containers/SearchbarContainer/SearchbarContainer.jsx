@@ -28,5 +28,5 @@ export default function SearchBarContainer({ setPage, name, setName, handleClick
     }
 
     return <SearchBarComponent name={name} handleEnter={handleEnter} handleClick={handleClick}
-        handleInputChange={handleInputChange} handleSubmit={handleSubmit} />
+        handleInputChange={handleInputChange} handleSubmit={handleSubmit}/>
 };

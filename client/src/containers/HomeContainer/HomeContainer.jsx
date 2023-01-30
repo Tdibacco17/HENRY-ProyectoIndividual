@@ -4,10 +4,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllDogs, getTemperaments } from "../../actions";
 
 import HomeComponent from "../../components/HomeComponent/HomeComponent";
+import { UseWindowSize } from "../../hooks/UseWindowSize";
 
 export default function HomeContainer() {
 
     const dispatch = useDispatch();
+
+    const { width } = UseWindowSize()
+
+
+
+    const [isShowHamburger, setIsShowHamburger] = useState(false)
+
+    useEffect(() => {
+        if (width > 999) {
+            setIsShowHamburger(false)
+            return
+        }
+    }, [width])
 
     //searchbar
     const [name, setName] = useState("");
@@ -36,6 +50,7 @@ export default function HomeContainer() {
         setName("")
     };
 
-    return <HomeComponent temperamentos={temperamentos} handleClick={handleClick} name={name} setName={setName}
+    return <HomeComponent temperamentos={temperamentos} handleClick={handleClick} name={name}
+        setName={setName} setIsShowHamburger={setIsShowHamburger} isShowHamburger={isShowHamburger}
         pageSize={pageSize} setInput={setInput} input={input} setPage={setPage} allDogs={allDogs.length} totalCount={currentPage} page={page} />
 };
