@@ -25,8 +25,23 @@ a {
   text-decoration: none;
   color: black;
 }
+
 strong {
   letter-spacing: 5px;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 992px) {
+  strong {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media screen and (max-width: 625px) {
+  strong {
+    font-size: 1.1rem;
+  }
+
 }

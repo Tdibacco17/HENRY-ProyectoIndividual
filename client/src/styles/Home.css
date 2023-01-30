@@ -1,6 +1,13 @@
 .contenedorCards {
     margin-top: 235px;
     margin-bottom: 150px;
+    transition: 0.5s;
+}
+
+.contenedorCards_burger {
+    margin-top: 355px;
+    margin-bottom: 150px;
+    transition: 0.5s;
 }
 
 .container_card {
@@ -12,12 +19,34 @@
 
 @media screen and (max-width: 992px) {
     .contenedorCards {
-        margin-bottom: 185px;
+        margin-bottom: 165px;
+        margin-bottom: 135px;
+    }
+
+    .contenedorCards_burger {
+        margin-top: 330px;
+        margin-bottom: 125px;
     }
 }
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 655px) {
+    .contenedorCards_burger {
+        margin-top: 385px;
+        margin-bottom: 200px;
+    }
+
     .contenedorCards {
-        margin-bottom: 235px;
+        margin-bottom: 205px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .contenedorCards_burger {
+        margin-top: 510px;
+        margin-bottom: 220px;
+    }
+
+    .contenedorCards {
+        margin-bottom: 225px;
     }
 }

@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import BreadcrumbComponent from "../../components/BreadcrumbComponent/BreadcrumbComponent";
 import { getAllDogs, filterTemperaments, filterCreated, orderByName, orderByWeight } from "../../actions/index";
 
-export default function BreadcrumbContainer({ children, isShowHamburger, setPage, totalCount, temperamentos, pageSize, setInput, input, allDogs, page }) {
+export default function BreadcrumbContainer({ children, isShowHamburger, setIsShowHamburger, setPage, totalCount, temperamentos, pageSize, setInput, input, allDogs, page }) {
 
     const dispatch = useDispatch();
 
@@ -51,5 +51,6 @@ export default function BreadcrumbContainer({ children, isShowHamburger, setPage
 
     return <BreadcrumbComponent handleSort={handleSort} handleWeight={handleWeight} handleCreated={handleCreated} isShowHamburger={isShowHamburger}
         handleTemperament={handleTemperament} temperamentos={temperamentos} handleClick={handleClick} name={name} setName={setName} children={children}
-        pageSize={pageSize} setInput={setInput} input={input} setPage={setPage} allDogs={allDogs} totalCount={totalCount} page={page} />
+        pageSize={pageSize} setInput={setInput} input={input} setPage={setPage} allDogs={allDogs} totalCount={totalCount} page={page}
+        setIsShowHamburger={setIsShowHamburger} />
 }

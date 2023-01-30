@@ -1,3 +1,13 @@
+.hamburger {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+}
+
 .container_all_breadcrumb_hamburger {
     position: fixed;
     top: 80px;
@@ -10,7 +20,6 @@
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 25px;
     background-color: #112B3C;
     border-top: 0px solid rgb(133, 130, 130);
     border-bottom: 2px solid rgb(133, 130, 130);
@@ -23,10 +32,10 @@
     position: fixed;
     top: 80px;
     left: 0px;
-    z-index: 4;
+    z-index: 3;
 
     width: 100%;
-    height: 20px;
+    height: 40px;
     background-color: #112B3C;
     margin-bottom: 25px;
     border-top: 0px solid rgb(133, 130, 130);
@@ -69,22 +78,58 @@
     transition: 0.2s;
 }
 
-@media screen and (max-width: 700px) {
+.searchbar_burger {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+@media screen and (max-width: 992px) {
     .container_all_breadcrumb_hamburger {
-        height: 200px;
+        height: 170px;
         flex-direction: column;
         align-items: center;
     }
+    
+}
+
+@media screen and (max-width: 655px) {
+    .container_all_breadcrumb_hamburger {
+        height: 220px;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .bradcrumb_allfilter {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        width: 375px;
+        width: 425px;
+    }
+    
+    .bradcrumb_allfilter select {
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 435px) {
+    .container_all_breadcrumb_hamburger {
+        height: 335px;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .bradcrumb_allfilter {
-        width: 290px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchbar_burger {
+
+        margin-bottom: 27px;
+    }
+
+    .bradcrumb_allfilter select {
+        font-size: 0.9rem;
     }
 }

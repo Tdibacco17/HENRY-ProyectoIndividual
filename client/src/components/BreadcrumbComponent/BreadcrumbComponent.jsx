@@ -1,20 +1,26 @@
 import "../../styles/Breadcrumb.css"
 import PaginateContainer from "../../containers/PaginateContainer/PaginateContainer"
+import { IoMenuSharp } from "react-icons/io5"
 
 import { UseWindowSize } from "../../hooks/UseWindowSize"
 
 export default function BreadcrumbComponent({ handleSort, handleWeight, handleCreated, handleTemperament, temperamentos,
-    page, pageSize, setPage, totalCount, setInput, input, allDogs, isShowHamburger, children }) {
+    page, pageSize, setPage, totalCount, setInput, input, allDogs, isShowHamburger, children, setIsShowHamburger }) {
 
     const { width } = UseWindowSize()
-    console.log(isShowHamburger);
+
     return (
         <>
             <div className={isShowHamburger === false ? "container_all_breadcrumb" : "container_all_breadcrumb_hamburger"}>
                 {/*   ACA ES EL COMPONENTE MOBILE*/}
                 {
+                    width <= 992 && <button onClick={() => setIsShowHamburger(!isShowHamburger)} className="hamburger"><IoMenuSharp /></button>
+                }
+                {
                     width <= 992 && isShowHamburger === true && <div>
-                        {children}
+                        <div className="searchbar_burger">
+                            {children}
+                        </div>
                         <div className="bradcrumb_allfilter">
                             <select onChange={e => handleSort(e)}>
                                 <option value="all">Sort by alphabetical</option>
@@ -66,7 +72,7 @@ export default function BreadcrumbComponent({ handleSort, handleWeight, handleCr
 
                 {
                     width > 992 && <div className="bradcrumb_allfilter">
-                        <select  onChange={e => handleCreated(e)}>
+                        <select onChange={e => handleCreated(e)}>
                             <option value="all">Sort by created</option>
                             <option value="Created">Created</option>
                             <option value="api">Existent</option>

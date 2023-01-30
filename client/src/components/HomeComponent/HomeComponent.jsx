@@ -17,12 +17,12 @@ export default function HomeComponent({ temperamentos, handleClick, page, pageSi
             <NavbarContainer isShowHamburger={isShowHamburger} setIsShowHamburger={setIsShowHamburger}>
                 <SearchBarContainer handleClick={handleClick} setPage={setPage} name={name} setName={setName} />
             </NavbarContainer>
-            <BreadcrumbContainer isShowHamburger={isShowHamburger} setPage={setPage} totalCount={totalCount} temperamentos={temperamentos}
+            <BreadcrumbContainer isShowHamburger={isShowHamburger} setIsShowHamburger={setIsShowHamburger} setPage={setPage} totalCount={totalCount} temperamentos={temperamentos}
                 pageSize={pageSize} setInput={setInput} input={input} allDogs={allDogs} page={page} >
                 <SearchBarContainer handleClick={handleClick} setPage={setPage} name={name} setName={setName} />
             </BreadcrumbContainer >
 
-            <div className="contenedorCards">
+            <div className={isShowHamburger === false ? "contenedorCards" : "contenedorCards_burger" }>
                 <div className="container_card">
                     {
                         totalCount.length > 0
