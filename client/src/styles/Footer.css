@@ -10,7 +10,7 @@ body {
 
 .contenedorFooter {
   background-color: #112B3C;
-  box-shadow: 0px -10px 50px rgba(0, 0, 0);
+  box-shadow: 0px -25px 35px rgba(0, 0, 0, 35%);
   position: absolute;
   bottom: 0px;
   width: 100%;

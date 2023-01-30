@@ -17,8 +17,7 @@ export default function HomeComponent({ temperamentos, handleClick, page, pageSi
             <NavbarContainer>
                 <SearchBarContainer handleClick={handleClick} setPage={setPage} name={name} setName={setName} />
             </NavbarContainer>
-            <BreadcrumbContainer
-                setPage={setPage} totalCount={totalCount} temperamentos={temperamentos}
+            <BreadcrumbContainer setPage={setPage} totalCount={totalCount} temperamentos={temperamentos}
                 pageSize={pageSize} setInput={setInput} input={input} allDogs={allDogs} page={page} />
 
             <div className="contenedorCards">

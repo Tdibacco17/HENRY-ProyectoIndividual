@@ -29,8 +29,8 @@
 }
 
 .container_all_searchbar input::placeholder {
-    color: white;
-    font-size: 0.9rem;
+    color: rgb(133, 130, 130);
+    font-size: 0.7rem;
     font-family: 'LatoBlack';
     letter-spacing: 1px;
 }
@@ -43,6 +43,9 @@
     font-size: 1.2rem;
     transition: 0.2s;
     cursor: pointer;
+}
+.cotainer_icon_searchbar{
+    font-size: 20px;
 }
 
 .container_all_searchbar button:hover {
