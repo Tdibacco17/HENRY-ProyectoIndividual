@@ -11,8 +11,8 @@ export default function CardComponent({ id, name, weight_min, weight_max, temper
             </Link>
             <div className="card_body">
                 <h3>{name}</h3>
-                <small>WEIGHT: {weight_min} - {weight_max}</small>
-                <small>TEMPERAMENTS: {temperament}</small>
+                <small>Min {weight_min} kg - Max {weight_max} kg </small>
+                <small>{temperament}</small>
             </div>
         </div>
     );

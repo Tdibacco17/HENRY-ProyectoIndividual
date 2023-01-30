@@ -1,90 +1,163 @@
-.detailBtn {
-    background:rgba(128, 128, 128, 0.678);
-    width: 100px;
-    height: 27px;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 2px  rgba(128, 128, 128, 0.678);
-    cursor: pointer;
-    font-family: 'LatoBlack';
-    font-size: 16px;
-    margin-bottom: 25px;
+.container_details {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
 }
 
-.detailBtn:hover {
-    background: rgba(255, 255, 255, 0.301);
-    border: 2px  rgba(255, 255, 255,0.301);
-}
-
-.imgPick {
-    width: 470px;
-    height:370px;
+.card_detail {
+    display: flex;
+    justify-content: space-between;
+    background: #112B3C;
     border-radius: 8px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-    
+    width: 900px;
+    height: 450px;
+    margin-bottom: 115px;
+}
+
+.card_detail img {
+    border-radius: 8px 0px 0px 8px;
+    width: 450px;
+    display: block;
+    object-fit: cover;
+    object-position: center 1%;
+    background: #112B3C;
+    padding: 0px;
+    margin: 0px;
+
 }
 
 .detailBody {
-    background:rgba(128, 128, 128, 0.850);
-    border-radius: 5px;
-    border: 2px  rgba(128, 128, 128, 0.850);
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    font-family: 'LatoBlack';
     width: 450px;
-    height: 350px;
-    margin-bottom: 40px;
-} 
-
-.conjunto {
+    height: 450px;
+    border-radius: 0px 8px 8px 0px;
+    font-family: 'LatoBlack';
+    color: white;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: space-between;
+    text-align: start;
+    overflow-x: hidden;
 }
 
-.deleteBtn{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    top: -355px;
-    right: -210px;
-    background:rgba(187, 125, 125, 0.748);
-    border: 2px rgba(187, 125, 125, 0.748);
+.info_body {
+    padding: 15px;
+    padding-left: 25px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+.info_body h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.info_body h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 10px;
+    padding: 0px;
+}
+
+.info_btn button {
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 15px;
     cursor: pointer;
-    padding: 2px;
-}
-.deleteBtn:hover {
-    background: rgba(255, 255, 255, 0.5);
-    border: 2px  rgba(255, 255, 255, 0.5);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
-@media screen and (max-width: 1250px){
+.info_btn button:hover {
+    color: rgb(133, 130, 130);
+    transition: 0.2s;
+}
 
-    .conjunto {
+@media screen and (max-width: 992px) {
+    .card_detail {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 450px;
+        height: 750px;
+        margin-bottom: 215px;
     }
 
-    .imgPick {
-        margin-top: 80px;
-        margin-bottom: 40px;
-        width: 310px;
-        height: 220px;
+    .card_detail img {
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .info_body h1 {
+        font-size: 2.8rem;
+    }
+
+    .info_body h4 {
+        font-size: 1.1rem;
+    }
+
+    .detailBody {
+        width: 450px;
+        height: 650px;
+    }
+
+    .info_body {
+        padding-left: 15px;
+    }
+
+}
+
+@media screen and (max-width: 525px) {
+    .card_detail {
+        width: 350px;
+        height: 650px;
+    }
+
+    .card_detail img {
+        width: 350px;
+    }
+
+    .info_body h1 {
+        font-size: 2.4rem;
+    }
+
+    .info_body h4 {
+        font-size: 1rem;
+    }
+
+    .detailBody {
+        width: 350px;
+        height: 650px;
+    }
+
+    .info_body {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .card_detail {
+        width: 290px;
+        height: 600px;
+    }
+
+    .card_detail img {
+        width: 290px;
+    }
+
+    .info_body h1 {
+        font-size: 2rem;
+    }
+
+    .info_body h4 {
+        font-size: 0.9rem;
     }
 
     .detailBody {
         width: 290px;
-        height: 380px;
+        height: 600px;
     }
-    .deleteBtn{
-        width: 25px;
-        height: 25px;
-        top: -370px;
-        right: -135px;
+
+    .info_body {
+        width: 290px;
     }
 }

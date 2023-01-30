@@ -95,7 +95,7 @@ export default function DogCreateContainer() {
     };
 
     function handleSelect(e) {
-        if(e.target.value === "Select"){
+        if (e.target.value === "Select") {
             return
         }
         input.temperament.includes(e.target.value) ?
@@ -118,7 +118,7 @@ export default function DogCreateContainer() {
         e.preventDefault();
         if (input.name !== "" && input.weight_min !== "" && input.weight_max !== "" &&
             input.height_min !== "" && input.height_max !== "" && input.year_min !== "" &&
-            input.year_max !== "" && input.image !== "" && input.temperament.length !== 0) {
+            input.year_max !== "" && input.temperament.length !== 0) {
 
             dispatch(postDog(input));
             alert("DOG CREATED!");

@@ -7,12 +7,11 @@ body {
   margin: 0;
   height: 100%;
   font-family: 'LatoBlack';
-  background: #404258;
+  background: #50577A;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar-x {
   display: none;
 }
 
@@ -25,4 +24,9 @@ code {
 a {
   text-decoration: none;
   color: black;
+}
+strong {
+  letter-spacing: 5px;
+  font-size: 2rem;
+  font-weight: 600;
 }

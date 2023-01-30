@@ -29,7 +29,7 @@ export default function HomeComponent({ temperamentos, handleClick, page, pageSi
                                 return (
                                     <CardContainer key={e.id} id={e.id} name={e.name} weight_min={e.weight_min} weight_max={e.weight_max} image={e.image ? e.image : imageDogDefault} temperament={e.temperament} />
                                 );
-                            }) : <small>Cargando...</small>
+                            }) : <strong>CARGANDO...</strong>
                     }
                 </div>
             </div>
