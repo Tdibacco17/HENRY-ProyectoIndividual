@@ -53,6 +53,5 @@ if (cluster.isPrimary) {
       console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
     });
   });
-
 }
 

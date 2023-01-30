@@ -51,5 +51,5 @@ export default function BreadcrumbContainer({ setPage, totalCount, temperamentos
 
     return <BreadcrumbComponent handleSort={handleSort} handleWeight={handleWeight} handleCreated={handleCreated}
         handleTemperament={handleTemperament} temperamentos={temperamentos} handleClick={handleClick} name={name} setName={setName}
-        pageSize={pageSize} setInput={setInput} input={input} setPage={setPage} allDogs={allDogs.length} totalCount={totalCount} page={page} />
+        pageSize={pageSize} setInput={setInput} input={input} setPage={setPage} allDogs={allDogs} totalCount={totalCount} page={page} />
 }

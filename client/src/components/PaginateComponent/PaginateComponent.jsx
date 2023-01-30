@@ -5,7 +5,7 @@ import { IoPlayForward, IoPlaySkipForward, IoPlayBack, IoPlaySkipBack } from "re
 export default function PaginateComponent({ page, totalPages, firstPage, prevPage, nextPage, lastPage }) {
 
     return (
-        <div className='"breadcrumb_paginado"'>
+        <div className="breadcrumb_paginado">
             <button disabled={page === 1 || page < 1} onClick={firstPage}><IoPlayBack /></button>
             <button disabled={page === 1 || page < 1} onClick={prevPage}><IoPlaySkipBack /></button>
             <h6> {page} / {totalPages}</h6>

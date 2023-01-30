@@ -1,8 +1,8 @@
 import "../../styles/Breadcrumb.css"
 import PaginateContainer from "../../containers/PaginateContainer/PaginateContainer"
 
-export default function BreadcrumbComponent({ handleSort, handleWeight, handleCreated, handleTemperament, temperamentos, handleClick,
-    page, pageSize, setPage, totalCount, setInput, input, allDogs, name, setName }) {
+export default function BreadcrumbComponent({ handleSort, handleWeight, handleCreated, handleTemperament, temperamentos,
+    page, pageSize, setPage, totalCount, setInput, input, allDogs }) {
 
     return (
         <div className="container_all_breadcrumb">
