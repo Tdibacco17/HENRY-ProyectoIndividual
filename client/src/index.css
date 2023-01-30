@@ -1,20 +1,28 @@
+html,
 body {
-  background-image: url("./img/DogDesktop.jpg");
-  margin: 0;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100%;
-  background-size: cover;
-
-  font-family: 'LatoBlack';
+  scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'LatoBlack';
+  background: #404258;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }

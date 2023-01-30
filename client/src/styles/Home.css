@@ -1,56 +1,10 @@
-.container_all_home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .contenedorCards {
-    background-color: rgba(128, 128, 128, 0.850);
-    padding-bottom: 40px;
-    padding-top: 15px;
+    margin-top: 160px;
+    margin-bottom: 120px;
 }
 
-.cardsDog {
+.container_card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-
-.reloadBtn {
-    background: rgba(128, 128, 128, 0.678);
-    width: 100px;
-    height: 25px;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 2px rgba(128, 128, 128, 0.678);
-    cursor: pointer;
-    font-family: 'LatoBlack';
-    font-size: 14px;
-}
-
-.reloadBtn:hover {
-    background: rgba(255, 255, 255, 0.301);
-    border: 2px rgba(255, 255, 255, 0.301);
-    transition: 0.3s;
-}
-
-.homeBtn {
-    background: rgba(128, 128, 128, 0.678);
-    width: 100px;
-    height: 50px;
-    margin-bottom: 20px;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 2px rgba(128, 128, 128, 0.678);
-    cursor: pointer;
-    font-family: 'LatoBlack';
-    font-size: 16px;
-}
-
-.homeBtn:hover {
-    background: rgba(255, 255, 255, 0.301);
-    border: 2px rgba(255, 255, 255, 0.301);
-    transition: 0.3s;
 }

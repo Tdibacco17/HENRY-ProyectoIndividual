@@ -16,13 +16,17 @@ export default function LandingPageComponent() {
         // eslint-disable-next-line
     }, [])
 
+
+
     return (
-        <div className="contenedorLanding">
-            <h1>THE DOG API</h1>
-            <h4>By Tomas Di Bacco</h4>
-            <small>Made in August-2022</small>
-            <Link to="/home"><h2>START</h2></Link>
-            <FooterContainer />
+        <div className="fondo_landing">
+            <div className="contenedorLanding">
+                <h1>THE DOG API</h1>
+                <h4>By Tomas Di Bacco</h4>
+                <small>Made in August-2022</small>
+                <Link to="/home"><h2>START</h2></Link>
+                <FooterContainer />
+            </div>
         </div>
     )
 };

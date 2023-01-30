@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles/Home.css";
-import "../../styles/Filters.css";
 
 import CardContainer from "../../containers/CardContainer/CardContainer";
 import FooterContainer from "../../containers/FooterContainer/FooterContainer";
@@ -14,14 +13,16 @@ export default function HomeComponent({ temperamentos, handleClick, page, pageSi
     totalCount, setInput, input, allDogs, name, setName }) {
 
     return (
-        <div className="container_all_home">
+        <>
             <NavbarContainer>
                 <SearchBarContainer handleClick={handleClick} setPage={setPage} name={name} setName={setName} />
             </NavbarContainer>
-            <BreadcrumbContainer setPage={setPage} totalCount={totalCount} temperamentos={temperamentos}
+            <BreadcrumbContainer
+                setPage={setPage} totalCount={totalCount} temperamentos={temperamentos}
                 pageSize={pageSize} setInput={setInput} input={input} allDogs={allDogs} page={page} />
+
             <div className="contenedorCards">
-                <div className="cardsDog">
+                <div className="container_card">
                     {
                         totalCount.length > 0
                             ? totalCount.map(e => {
@@ -33,7 +34,7 @@ export default function HomeComponent({ temperamentos, handleClick, page, pageSi
                 </div>
             </div>
             <FooterContainer />
-        </div>
+        </>
     );
 
 };

@@ -1,38 +1,67 @@
 .cardDog {
-    background:rgba(128, 128, 128, 0.678);
+    background: #2B3A55;
     width: 300px;
-    height: 370px;
-    margin: 15px;
-    border-radius: 5px;
-    border: 2px  rgba(128, 128, 128, 0.678);
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-    font-family: 'LatoBlack';
-}
-
-.cardDog img{
+    height: 375px;
+    margin: 30px 5px 30px 5px;
     border-radius: 8px;
-    width: 90%;
-    height: 190px;
+
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: 0.2s;
 }
 
-.body {
+.cardDog img {
+    border-radius: 8px 8px 0px 0px;
+    width: 300px;
+    height: 225px;
+    display: block;
+    object-fit: cover;
+    object-position: center 30%;
+    background: #2B3A55;
+    padding: 0px;
+    margin: 0px;
+}
+
+.card_body {
+    width: 300px;
+    height: 200px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 0;
-    
 }
 
-.cardDog:hover{
-    transition: 0.3s;
-    background-color: rgba(255, 255, 255, 0.301);
-    border: 2px  rgba(255, 255, 255, 0.301);
+.card_body h3 {
+    font-family: 'LatoBlack';
+    text-align: center;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 15px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
-@media screen and (max-width: 1250px){
+.card_body small {
+    font-family: 'LatoBlack';
+    text-align: center;
+    color: white;
+    margin: 0px;
+    padding: 15px;
+    padding-bottom: 0px;
+    word-wrap: break-word;
+}
+
+
+.cardDog:hover {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 1250px) {
 
     .cardDog {
         width: 280px;
     }
-    
+
 }
