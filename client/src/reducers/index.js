@@ -14,10 +14,10 @@ export default function rootReducer(state = initialState, action) {
                 allDogs: action.payload //respaldo de arreglo de todos los dogs para usar en los filtros
             }
         case "GET_DOG_BY_NAME":
-                return {
-                    ...state,
-                    dogs: action.payload
-                }
+            return {
+                ...state,
+                dogs: action.payload
+            }
         case "GET_DOG_BY_ID":
             return {
                 ...state,
@@ -40,10 +40,10 @@ export default function rootReducer(state = initialState, action) {
                 dogs: statusFiltered
             }
         case "FILTER_CREATED": //devuelvo los perros si el payload es creatd y que tengan la propiedad createdInDb, sino los de la api 
-            var createdFilter = action.payload === "Created" ? state.allDogs.filter(e => e.createdInDb) : state.allDogs.filter(e => !e.createdInDb)
+            var createdFilter = action.payload === "Created" ? [...state.allDogs].filter(e => e.createdInDb) : [...state.allDogs].filter(e => !e.createdInDb)
             return {
                 ...state,
-                dogs: action.payload === 'All' ? state.allDogs : createdFilter // y sino todos
+                dogs: action.payload === 'All' ? [...state.allDogs] : createdFilter // y sino todos
             }
         case "ORDER_BY_NAME": //filtro por ascendete o decendente
             const arreglo = action.payload === 'asc' ?

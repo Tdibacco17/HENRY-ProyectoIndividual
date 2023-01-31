@@ -37,16 +37,25 @@ export default function BreadcrumbContainer({ children, isShowHamburger, setIsSh
 
     function handleSort(e) {
         e.preventDefault();
-        dispatch(orderByName(e.target.value));
-        setPage(1)
-        setOrder(`Ordenado ${e.target.value}`);
+        if (e.target.value === "All") {
+            dispatch(getAllDogs());
+        } else {
+            dispatch(orderByName(e.target.value));
+            setPage(1)
+            setOrder(`Ordenado ${e.target.value}`);
+        }
+
     };
 
     function handleWeight(e) {
         e.preventDefault();
-        dispatch(orderByWeight(e.target.value));
-        setPage(1)
-        setOrder2(`Ordenado ${e.target.value}`);
+        if (e.target.value === "All") {
+            dispatch(getAllDogs());
+        } else {
+            dispatch(orderByWeight(e.target.value));
+            setPage(1)
+            setOrder2(`Ordenado ${e.target.value}`);
+        }
     };
 
     return <BreadcrumbComponent handleSort={handleSort} handleWeight={handleWeight} handleCreated={handleCreated} isShowHamburger={isShowHamburger}

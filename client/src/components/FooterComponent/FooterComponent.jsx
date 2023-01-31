@@ -2,15 +2,11 @@ import React from "react";
 import "../../styles/Footer.css";
 import { SiGmail, SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
 
-import { UseWindowSize } from "../../hooks/UseWindowSize"
-
 export default function FooterComponent() {
-    const { width } = UseWindowSize()
 
     return (
         <div className="contenedorFooter">
-            {width > 625 && <img className="imgHenry" src={require("../../img/logoHenry.png").default} alt="logo_henry" />}
-            <div>
+            <div className="posiciones_foot">
                 <div className="container_icons">
                     <a href="mailto:tomasdibacco@gmail.com" rel="noopener noreferrer" target="_blank">
                         <SiGmail className="icon_footer" />
@@ -25,14 +21,8 @@ export default function FooterComponent() {
                         <SiWhatsapp className="icon_footer" />
                     </a>
                 </div>
+                <small className="footer_small">MADE IN AUGUST-2022</small>
             </div>
-            {width > 625 && <img className="imgLogoDog" src={require("../../img/dog.png").default} alt="icon_proyect" />}
-            {
-                width < 625 && <div className="container_img">
-                    <img className="imgLogoDog" src={require("../../img/dog.png").default} alt="icon_proyect" />
-                    <img className="imgHenry" src={require("../../img/logoHenry.png").default} alt="logo_henry" />
-                </div>
-            }
         </div>
     )
 }

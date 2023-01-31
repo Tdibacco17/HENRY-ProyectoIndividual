@@ -24,7 +24,7 @@
 }
 
 .breadcrumb_paginado button:hover {
-    color: rgb(133, 130, 130);
+    color: var(--hovers);
     transition: 0.2s;
 }
 

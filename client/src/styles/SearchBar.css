@@ -9,7 +9,7 @@
 }
 
 .container_all_searchbar:hover {
-    border-bottom: 2px solid rgb(133, 130, 130);
+    border-bottom: 2px solid var(--hovers);
     transition: 0.2s;
 }
 
@@ -23,14 +23,14 @@
     outline: 0px;
 
     margin-right: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     font-family: 'sans-serif';
 }
 
 .container_all_searchbar input::placeholder {
     color: rgb(133, 130, 130);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-family: 'sans-serif';
     letter-spacing: 1px;
 }
@@ -50,7 +50,7 @@
 }
 
 .container_all_searchbar button:hover {
-    color: rgb(133, 130, 130);
+    color: var(--hovers);
     transition: 0.2s;
 }
 
@@ -75,18 +75,19 @@
 }
 
 .navbar_center_btn:hover {
-    color: rgb(133, 130, 130);
+    color: var(--hovers);
     transition: 0.2s;
 }
 
 .navbar_center_btn small {
     font-weight: 600;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    font-family: 'sans-serif';
 }
 
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 465px) {
 
     .navbar_center {
         display: flex;

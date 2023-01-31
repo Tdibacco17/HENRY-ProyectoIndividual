@@ -1,13 +1,18 @@
 .cardDog {
-    background: #112B3C;
+    background: var(--background-color-app);
     width: 270px;
     height: 385px;
     border-radius: 8px;
     margin-bottom: 45px;
-
+    color: white;
     box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.9);
     overflow: hidden;
-    transition: 0.2s;
+    transition: 0.5s;
+}
+
+.cardDog:hover {
+    background: linear-gradient(170deg, var(--hovers) 0%, var(--background-color-app) 115%);
+    transition: all 0.5s;
 }
 
 .cardDog img {
@@ -17,7 +22,7 @@
     display: block;
     object-fit: cover;
     object-position: center 1%;
-    background: #112B3C;
+    background: var(--background-color-app);
     padding: 0px;
     margin: 0px;
 }
@@ -32,23 +37,25 @@
 }
 
 .card_body h3 {
-   font-family: 'sans-serif';
+    font-family: 'sans-serif';
     text-align: center;
-    color: white;
     padding: 0px;
     margin: 0px;
     padding-top: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
     letter-spacing: 0.5px;
     font-weight: 600;
     font-size: 1.2rem;
+    transition: 0.3s;
 }
 
 .card_body small {
-   font-family: 'sans-serif'; 
+    font-family: 'sans-serif';
     text-align: center;
     letter-spacing: 0.5px;
     font-size: 0.9rem;
-    color: white;
+    font-weight: 400;
     margin: 0px;
     padding: 15px;
     padding-bottom: 0px;
@@ -57,5 +64,5 @@
 
 .cardDog:hover {
     opacity: 1;
-    transition: 0.2s;
+    transition: 0.3s;
 }

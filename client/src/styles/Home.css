@@ -20,33 +20,32 @@
 @media screen and (max-width: 992px) {
     .contenedorCards {
         margin-bottom: 165px;
-        margin-bottom: 135px;
+        margin-bottom: 155px;
     }
 
     .contenedorCards_burger {
-        margin-top: 330px;
+        margin-top: 415px;
         margin-bottom: 125px;
     }
 }
 
 @media screen and (max-width: 655px) {
     .contenedorCards_burger {
-        margin-top: 385px;
-        margin-bottom: 200px;
+        margin-top: 405px;
+        margin-bottom: 180px;
     }
 
     .contenedorCards {
-        margin-bottom: 205px;
+        margin-bottom: 180px;
     }
 }
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 465px) {
     .contenedorCards_burger {
-        margin-top: 510px;
-        margin-bottom: 220px;
+        margin-top: 530px;
     }
 
     .contenedorCards {
-        margin-bottom: 225px;
+        margin-bottom: 160px;
     }
 }

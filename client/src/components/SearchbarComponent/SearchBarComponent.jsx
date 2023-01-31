@@ -1,11 +1,8 @@
 import React from "react";
 import "../../styles/SearchBar.css";
 import { IoSearchSharp, IoReload } from "react-icons/io5"
-// import { UseWindowSize } from "../../hooks/UseWindowSize"
 
 export default function SearchBarComponent({ handleInputChange, handleSubmit, name, handleEnter, handleClick }) {
-
-    // const { width } = UseWindowSize()
 
     return (
         <>

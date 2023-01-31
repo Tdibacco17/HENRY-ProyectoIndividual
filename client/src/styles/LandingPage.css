@@ -31,15 +31,15 @@
     margin: 0px;
     margin-top: 50px;
     transition: 0.7s;
-    padding: 15px;
-    border-radius: 15px;
+    padding: 12px;
+    border-radius: 10px;
     letter-spacing: 3px;
 }
 
 .contenedorLanding h2:hover {
     transition: 0.3s;
-    color: white;
-    background: #112B3C;
+    color: var(--hovers);
+    background: var(--background-color-app);
 }
 
 .contenedorLanding h4 {
@@ -49,12 +49,6 @@
     letter-spacing: 2px;
 }
 
-.contenedorLanding small {
-    margin-top: -35px;
-    font-weight: 400;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-}
 
 
 @media screen and (max-width: 625px) {
@@ -70,12 +64,6 @@
     .contenedorLanding h4 {
         font-size: 1.6rem;
         margin-top: -5px;
-
-    }
-
-    .contenedorLanding small {
-        font-size: 1.1rem;
-        margin-top: -15px;
 
     }
 }

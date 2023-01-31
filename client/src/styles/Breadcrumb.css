@@ -12,7 +12,7 @@
     position: fixed;
     top: 80px;
     left: 0px;
-    z-index: 4;
+    z-index: 3;
     width: 100%;
     height: 100px;
     display: flex;
@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: space-between;
 
-    background-color: #112B3C;
+    background: var(--background-color-app);
     border-top: 0px solid rgb(133, 130, 130);
     border-bottom: 2px solid rgb(133, 130, 130);
     box-shadow: 0px 25px 35px rgba(0, 0, 0, 35%);
@@ -36,7 +36,7 @@
 
     width: 100%;
     height: 40px;
-    background-color: #112B3C;
+    background: var(--background-color-app);
     margin-bottom: 25px;
     border-top: 0px solid rgb(133, 130, 130);
     border-bottom: 2px solid rgb(133, 130, 130);
@@ -61,10 +61,11 @@
     color: white;
     transition: 0.5s;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
     font-weight: 400;
 
-   font-family: 'sans-serif';
+    font-family: 'sans-serif';
     outline: 0;
     border: 0 !important;
 }
@@ -74,7 +75,7 @@
 }
 
 .bradcrumb_allfilter select:hover {
-    color: rgb(133, 130, 130);
+    color: var(--hovers);
     transition: 0.2s;
 }
 
@@ -82,20 +83,21 @@
     display: flex;
     justify-content: center;
     margin-bottom: 45px;
+    gap: 20px;
+}
+
+.burger_createdog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'sans-serif';
+    margin-bottom: 25px;
 }
 
 @media screen and (max-width: 992px) {
     .container_all_breadcrumb_hamburger {
-        height: 170px;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-}
-
-@media screen and (max-width: 655px) {
-    .container_all_breadcrumb_hamburger {
-        height: 220px;
+        height: 265px;
         flex-direction: column;
         align-items: center;
     }
@@ -104,17 +106,32 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        width: 425px;
-    }
-    
-    .bradcrumb_allfilter select {
-        font-size: 1rem;
+        width: 550px;
     }
 }
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 655px) {
     .container_all_breadcrumb_hamburger {
-        height: 335px;
+        height: 260px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bradcrumb_allfilter {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 500px;
+    }
+
+    .bradcrumb_allfilter select {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .container_all_breadcrumb_hamburger {
+        height: 370px;
         flex-direction: column;
         align-items: center;
     }
@@ -125,11 +142,10 @@
     }
 
     .searchbar_burger {
-
         margin-bottom: 27px;
     }
 
     .bradcrumb_allfilter select {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }

@@ -19,6 +19,11 @@ h1 h2 h3 h4 h5 h6 small strong button p a {
   display: none;
 }
 
+:root {
+  --background-color-app: #272742;
+  --hovers: rgb(228, 154, 80);
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

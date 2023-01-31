@@ -23,7 +23,6 @@ export default function LandingPageComponent() {
             <div className="contenedorLanding">
                 <h1>THE DOG API</h1>
                 <h4>By Tomas Di Bacco</h4>
-                <small>Made in August-2022</small>
                 <Link to="/home"><h2>START</h2></Link>
                 <FooterContainer />
             </div>

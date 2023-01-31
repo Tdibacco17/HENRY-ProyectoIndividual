@@ -1,7 +1,7 @@
 import "../../styles/Breadcrumb.css"
 import PaginateContainer from "../../containers/PaginateContainer/PaginateContainer"
 import { IoMenuSharp } from "react-icons/io5"
-
+import { Link } from "react-router-dom";
 import { UseWindowSize } from "../../hooks/UseWindowSize"
 
 export default function BreadcrumbComponent({ handleSort, handleWeight, handleCreated, handleTemperament, temperamentos,
@@ -18,27 +18,28 @@ export default function BreadcrumbComponent({ handleSort, handleWeight, handleCr
                 }
                 {
                     width <= 992 && isShowHamburger === true && <div>
+                        <Link to="/dogs" className="burger_createdog">CREATE DOG</Link>
                         <div className="searchbar_burger">
                             {children}
                         </div>
                         <div className="bradcrumb_allfilter">
                             <select onChange={e => handleSort(e)}>
-                                <option value="all">Sort by alphabetical</option>
+                                <option value="All">SORT BY ALPHABETICAL</option>
                                 <option value="asc">A - Z</option>
                                 <option value="desc">Z - A</option>
                             </select>
                             <select onChange={e => handleWeight(e)}>
-                                <option value="all">Sort by weight</option>
+                                <option value="All">SORT BY WEIGHT</option>
                                 <option value="min">Min weight</option>
                                 <option value="max">Max weight</option>
                             </select>
                             <select onChange={e => handleCreated(e)}>
-                                <option value="all">Sort by created</option>
+                                <option value="All">SORT BY CREATED</option>
                                 <option value="Created">Created</option>
                                 <option value="api">Existent</option>
                             </select>
                             <select onChange={e => handleTemperament(e)}>
-                                <option value='All'>Sort by temperaments</option>
+                                <option value='All'>SORT BY TEMPERAMENTS</option>
                                 {
                                     temperamentos.length > 0
                                         ? temperamentos.map((e) => (
@@ -53,12 +54,12 @@ export default function BreadcrumbComponent({ handleSort, handleWeight, handleCr
                 {
                     width > 992 && <div className="bradcrumb_allfilter">
                         <select onChange={e => handleSort(e)}>
-                            <option value="all">Sort by alphabetical</option>
+                            <option value="all">SORT BY ALPHABETICAL</option>
                             <option value="asc">A - Z</option>
                             <option value="desc">Z - A</option>
                         </select>
                         <select onChange={e => handleWeight(e)}>
-                            <option value="all">Sort by weight</option>
+                            <option value="all">SORT BY WEIGHT</option>
                             <option value="min">Min weight</option>
                             <option value="max">Max weight</option>
                         </select>
@@ -73,12 +74,12 @@ export default function BreadcrumbComponent({ handleSort, handleWeight, handleCr
                 {
                     width > 992 && <div className="bradcrumb_allfilter">
                         <select onChange={e => handleCreated(e)}>
-                            <option value="all">Sort by created</option>
+                            <option value="all">SORT BY CREATED</option>
                             <option value="Created">Created</option>
                             <option value="api">Existent</option>
                         </select>
                         <select onChange={e => handleTemperament(e)}>
-                            <option value='All'>Sort by temperaments</option>
+                            <option value='All'>SORT BY TEMPERAMENTS</option>
                             {
                                 temperamentos.length > 0
                                     ? temperamentos.map((e) => (

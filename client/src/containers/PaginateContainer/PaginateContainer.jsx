@@ -3,7 +3,6 @@ import PaginateComponent from "../../components/PaginateComponent/PaginateCompon
 
 export default function PaginateContainer({ allDogs, page, pageSize, setPage, setInput, input }) {
 
-
     const totalPages = Math.ceil(allDogs / pageSize);
 
     const prevPage = () => {
@@ -26,6 +25,6 @@ export default function PaginateContainer({ allDogs, page, pageSize, setPage, se
         setPage(totalPages);
     }
 
-    return <PaginateComponent prevPage={prevPage} nextPage={nextPage} firstPage={firstPage} lastPage={lastPage} totalPages={totalPages} page={page} />
+    return <PaginateComponent allDogs={allDogs} prevPage={prevPage} nextPage={nextPage} firstPage={firstPage} lastPage={lastPage} totalPages={totalPages} page={page} />
 };
 
