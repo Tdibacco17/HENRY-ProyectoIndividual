@@ -31,7 +31,7 @@ export default function HomeContainer() {
     const temperamentos = useSelector((state) => state.temperaments);
 
     const [page, setPage] = useState(1);
-    const [pageSize] = useState(8);
+    const [pageSize] = useState(12);
     const [input, setInput] = useState(1);
     let lastCard = page * pageSize;
     let firstCard = lastCard - pageSize

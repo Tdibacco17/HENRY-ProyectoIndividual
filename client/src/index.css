@@ -19,6 +19,21 @@ h1 h2 h3 h4 h5 h6 small strong button p a {
   display: none;
 }
 
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: rgb(105, 105, 105);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 6px;
+}
+
 :root {
   --background-color-app: #272742;
   --hovers: rgb(228, 154, 80);
