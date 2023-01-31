@@ -1,7 +1,7 @@
 import React from "react";
 import PaginateComponent from "../../components/PaginateComponent/PaginateComponent";
 
-export default function PaginateContainer({ allDogs, page, pageSize, setPage, setInput, input }) {
+export default function PaginateContainer({ allDogs, page, pageSize, setPage, setInput, input, totalCount }) {
 
     const totalPages = Math.ceil(allDogs / pageSize);
 
@@ -25,6 +25,6 @@ export default function PaginateContainer({ allDogs, page, pageSize, setPage, se
         setPage(totalPages);
     }
 
-    return <PaginateComponent allDogs={allDogs} prevPage={prevPage} nextPage={nextPage} firstPage={firstPage} lastPage={lastPage} totalPages={totalPages} page={page} />
+    return <PaginateComponent totalCount={totalCount} prevPage={prevPage} nextPage={nextPage} firstPage={firstPage} lastPage={lastPage} totalPages={totalPages} page={page} />
 };
 

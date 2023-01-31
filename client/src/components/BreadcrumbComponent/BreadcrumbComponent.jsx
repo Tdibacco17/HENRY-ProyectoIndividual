@@ -68,7 +68,7 @@ export default function BreadcrumbComponent({ handleSort, handleWeight, handleCr
 
                 {
                     totalCount.length > 0 &&
-                    <PaginateContainer allDogs={allDogs} pageSize={pageSize} setInput={setInput} input={input} setPage={setPage} totalCount={totalCount.length} page={page} />
+                    <PaginateContainer allDogs={allDogs} pageSize={pageSize} setInput={setInput} input={input} setPage={setPage} totalCount={totalCount} page={page} />
                 }
 
                 {
