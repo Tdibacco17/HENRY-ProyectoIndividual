@@ -17,6 +17,7 @@
 .card_detail img {
     border-radius: 8px 0px 0px 8px;
     width: 450px;
+    height: 450px;
     display: block;
     object-fit: cover;
     object-position: center 1%;
@@ -30,7 +31,7 @@
     width: 450px;
     height: 450px;
     border-radius: 0px 8px 8px 0px;
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif';
     color: white;
     display: flex;
     justify-content: space-between;
@@ -46,7 +47,7 @@
 }
 
 .info_body h1 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 600;
     letter-spacing: 1px;
     margin: 0px;
@@ -54,7 +55,7 @@
 }
 
 .info_body h4 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.5px;
     margin: 10px;
@@ -80,7 +81,7 @@
         display: flex;
         flex-direction: column;
         width: 450px;
-        height: 750px;
+        height: 875px;
         margin-bottom: 215px;
     }
 
@@ -89,7 +90,7 @@
     }
 
     .info_body h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
     .info_body h4 {
@@ -110,7 +111,7 @@
 @media screen and (max-width: 525px) {
     .card_detail {
         width: 350px;
-        height: 650px;
+        height: 750px;
     }
 
     .card_detail img {
@@ -137,7 +138,7 @@
 @media screen and (max-width: 425px) {
     .card_detail {
         width: 290px;
-        height: 600px;
+        height: 675px;
     }
 
     .card_detail img {

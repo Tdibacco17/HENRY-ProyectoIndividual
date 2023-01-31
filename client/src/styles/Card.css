@@ -32,7 +32,7 @@
 }
 
 .card_body h3 {
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif';
     text-align: center;
     color: white;
     padding: 0px;
@@ -44,7 +44,7 @@
 }
 
 .card_body small {
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif'; 
     text-align: center;
     letter-spacing: 0.5px;
     font-size: 0.9rem;

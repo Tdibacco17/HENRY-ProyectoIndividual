@@ -6,9 +6,13 @@ body {
 body {
   margin: 0;
   height: 100%;
-  font-family: 'LatoBlack';
   background: #50577A;
   overflow-x: hidden;
+  font-family: 'sans-serif';
+}
+
+h1 h2 h3 h4 h5 h6 small strong button p a {
+  font-family: 'sans-serif';
 }
 
 ::-webkit-scrollbar-x {

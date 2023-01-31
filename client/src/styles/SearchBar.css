@@ -25,13 +25,13 @@
     margin-right: 10px;
     font-size: 0.9rem;
     letter-spacing: 1px;
-    font-family: 'LatoBlack';
+    font-family: 'sans-serif';
 }
 
 .container_all_searchbar input::placeholder {
     color: rgb(133, 130, 130);
     font-size: 0.7rem;
-    font-family: 'LatoBlack';
+    font-family: 'sans-serif';
     letter-spacing: 1px;
 }
 
@@ -44,7 +44,8 @@
     transition: 0.2s;
     cursor: pointer;
 }
-.cotainer_icon_searchbar{
+
+.cotainer_icon_searchbar {
     font-size: 20px;
 }
 

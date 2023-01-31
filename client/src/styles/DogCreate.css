@@ -53,7 +53,7 @@
     outline: 0px;
     font-size: 1rem;
     letter-spacing: px;
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif';
     color: white;
     margin-right: 25px;
 }
@@ -67,7 +67,7 @@
 
     font-size: 0.9rem;
     letter-spacing: 1px;
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif';
     color: white;
     padding-left: 15px;
 }
@@ -75,7 +75,7 @@
 .container_seccion input::placeholder {
     color: rgb(133, 130, 130);
     font-size: 0.8rem;
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif';
     letter-spacing: 1.5px;
 }
 
@@ -89,7 +89,7 @@
     font-size: 1rem;
     font-weight: 400;
 
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif';
     outline: 0;
     border: 0 !important;
 }
@@ -134,7 +134,7 @@
     background: none;
     color: white;
     padding: 10px;
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif';
     margin-top: -25px;
     transition: 0.2s;
     cursor: pointer;
@@ -151,7 +151,7 @@
     background: none;
     color: white;
     padding: 10px;
-    font-family: 'LatoBlack';
+   font-family: 'sans-serif'; 
     transition: 0.2s;
     cursor: pointer;
 }
