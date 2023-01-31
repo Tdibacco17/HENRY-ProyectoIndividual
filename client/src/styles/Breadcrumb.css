@@ -71,7 +71,7 @@
 }
 
 .bradcrumb_allfilter select option {
-    color: #112B3C;
+    color: var(--background-color-app);
 }
 
 .bradcrumb_allfilter select:hover {

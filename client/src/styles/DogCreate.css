@@ -95,7 +95,7 @@
 }
 
 .container_seccion select option {
-    color: #112B3C;
+    color: var(--background-color-app);
 }
 
 .container_seccion select:hover {
