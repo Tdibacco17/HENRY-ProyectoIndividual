@@ -19,7 +19,7 @@ export default function DetailContainer(props) {
 
     function handleClick(e) {
         dispatch(deleteDog(props.match.params.id));
-        alert('Dog Deleted');
+        alert('DOG DELETED!');
         history.push("/home");
     }
 

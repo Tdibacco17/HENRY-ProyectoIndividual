@@ -99,7 +99,7 @@ export default function DogCreateContainer() {
             return
         }
         input.temperament.includes(e.target.value) ?
-            alert("equal temperaments cannot be added") :
+            alert("Equal temperaments cannot be added") :
             setInput({
                 ...input,
                 temperament: [...input.temperament, e.target.value] //si quiero muchos ponerlo asi [...input.temperament,e.target.value]

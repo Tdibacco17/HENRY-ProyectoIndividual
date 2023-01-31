@@ -38,7 +38,7 @@ const getDogs = async (req, res) => { // obtener todos los perros y filtrar por 
         if (typeof name === "number") {
             return res.status(200).json({
                 succes: true,
-                msg: "Parametro de busqueda distinto a string",
+                msg: "Invalid search parameter. Text only",
                 result: []
             });
         }
@@ -53,7 +53,7 @@ const getDogs = async (req, res) => { // obtener todos los perros y filtrar por 
         if (result.length === 0) {
             return res.status(200).json({
                 succes: true,
-                msg: "No se encontro un perro con ese nombre",
+                msg: "Can't find a dog with that name",
                 result: []
             });
         }
@@ -87,7 +87,7 @@ const getDogId = async (req, res) => {  // filtro de perros por id
 
         return res.status(200).json({
             succes: true,
-            msg: `Envio del perro con ID: ${idRaza}`,
+            msg: `Can't find dog with ID: ${idRaza}`,
             result: result
         });
     } catch (e) {
