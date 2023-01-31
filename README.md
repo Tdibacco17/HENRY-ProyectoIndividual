@@ -23,19 +23,19 @@
 
 </br>
 
-<a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">
-   <img width="450px" height="275px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs.jpg">
+<a href="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/ApiDog1.PNG" rel="noopener noreferrer" target="_blank">
+   <img width="450px" height="275px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/ApiDog1.PNG">
 </a>
 
-<a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">
-   <img width="450px" height="275px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs2.png">
+<a href="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/ApiDog2.PNG" rel="noopener noreferrer" target="_blank">
+   <img width="450px" height="275px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/ApiDog2.PNG">
 </a>
 
-<a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">
-   <img width="450px" height="275px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs3.png">
+<a href="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/ApiDog3.PNG" rel="noopener noreferrer" target="_blank">
+   <img width="450px" height="275px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/ApiDog3.PNG">
 </a>
 
-<a href="https://app-dogs-tomas-di-bacco.vercel.app/" rel="noopener noreferrer" target="_blank">
-   <img width="450px" height="275px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/PiDogs4.png">
+<a href="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/ApiDog4.PNG" rel="noopener noreferrer" target="_blank">
+   <img width="450px" height="275px" src="https://github.com/Tdibacco17/App-Proyecto-Individual-/blob/main/Imagenes/ApiDog4.PNG">
 </a>
 
