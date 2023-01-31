@@ -32,7 +32,7 @@ export default function DetailComponent({ myDog, handleClick }) {
                                 }
                             </div>
                         </div>
-                    </div> : <strong>CARGANDO..</strong>
+                    </div> : <strong>LOADING..</strong>
             }
             <FooterContainer />
         </div>
