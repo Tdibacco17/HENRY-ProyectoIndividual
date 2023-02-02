@@ -42,8 +42,8 @@ if (cluster.isPrimary) {
 
 } else {
 
-  const PORT = 3000; //process.env.PGPORT ||
-  const HOST = "0.0.0.0"; // process.env.PGHOST ||
+  const PORT = process.env.PGPORT || 3000; //
+  const HOST = process.env.PGHOST || "0.0.0.0"; // 
 
   // Syncing all the models at once.
   conn.sync({ force: false }).then(() => {
