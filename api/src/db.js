@@ -12,6 +12,15 @@ const sequelize = new Sequelize(`postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}:
   dialectModule: pg
 });
 
+//conexion railway
+/*
+PGDATABASE=
+PGHOST=
+PGPASSWORD=
+PGPORT=
+PGUSER=
+*/
+
 // const { LOCALUSER, LOCALPASSWORD, LOCALHOST, LOCALPORT, LOCALDATABASE } = process.env;
 // const sequelize = new Sequelize(`postgresql://${LOCALUSER}:${LOCALPASSWORD}@${LOCALHOST}:${LOCALPORT}/${LOCALDATABASE}`, {
 //   logging: false, // set to console.log to see the raw SQL queries
@@ -20,7 +29,6 @@ const sequelize = new Sequelize(`postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}:
 // });
 
 //conexcion con local 
-
 /* 
 LOCALUSER=postgres
 LOCALPASSWORD=postgres
