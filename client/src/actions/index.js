@@ -22,7 +22,7 @@ export function getDogByName(name) { // filtrar perro por name
     return async function (dispatch) {
         try {
             let json = await axios.get(`/dogs?name=${name}`);
-
+            
             if (json.data.result.length === 0) {
                 alert(json.data.msg);
                 return

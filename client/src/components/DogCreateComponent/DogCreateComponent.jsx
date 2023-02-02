@@ -13,7 +13,7 @@ export default function DogCreateComponent({ handleSubmit, input, errors, handle
             <div className="contenedor">
                 <h2>CREATE DOG!</h2>
 
-                {sendData === true && <small>Completar todos los campos</small>}
+                {sendData === true && <small>Complete all fields</small>}
 
                 <form onSubmit={e => handleSubmit(e)}>
                     <div className="container_form">
