@@ -8,9 +8,20 @@ import SearchBarContainer from "../../containers/SearchbarContainer/SearchbarCon
 import imageDogDefault from "../../img/DogDefault.jpg"
 import NavbarContainer from "../../containers/NavbarContainer/NavbarContainer";
 import BreadcrumbContainer from "../../containers/BreadcrumbContainer/BreadcrumbContainer";
+import { useDispatch } from "react-redux";
+import { getAllDogs, getTemperaments } from "../../actions";
 
 export default function HomeComponent({ temperamentos, handleClick, page, pageSize, setPage,
     totalCount, setInput, input, allDogs, name, setName, isShowHamburger, setIsShowHamburger }) {
+
+        const dispatch = useDispatch();
+
+        useEffect(() => {
+            dispatch(getAllDogs());
+            dispatch(getTemperaments());
+            // eslint-disable-next-line
+        }, [])
+    
 
     return (
         <>
